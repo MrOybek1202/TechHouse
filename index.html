@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TECHHOUSE</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<!-- Top Bar -->
+	<div class="top-bar" id="top-bar">
+		<div class="top-bar-content">
+			<div class="top-bar-left">
+				<div class="location">
+					<i class="bi bi-geo-alt-fill"></i>
+					<span>Tashkent</span>
+				</div>
+				<div class="phone">
+					<i class="bi bi-telephone-fill"></i>
+					<span>+998 (99) 999-99-99</span>
+				</div>
+			</div>
+			<div class="top-bar-right">
+				<a href="#footer">About Us</a>
+				<a href="#map">Stores</a>
+				<a href="#">Track Order</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Header -->
+	<div class="main-header">
+		<div class="header-content">
+			<a href="./index.html" class="logo">
+				<div class="logo-icon">T</div>
+				<div class="logo-text">
+					<div>
+						<span class="tech">TECH</span><span class="house">HOUSE</span>
+					</div>
+					<div class="logo-subtitle">House of Technology</div>
+				</div>
+			</a>
+
+			<button class="catalog-btn" onclick="toggleCatalog()">
+				<img src="./images/burger.png" alt="">
+				<span>Catalog</span>
+			</button>
+
+			<div class="search-container">
+				<div class="search-bar">
+					<input type="text" placeholder="Search products...">
+					<a href="./search.html" class="search-btn"><i class="bi bi-search"></i></a>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<a href="./authPage.html" class="icon-btn" id="userLink">
+					<i class="icon fa-regular fa-user" id="userIcon"></i>
+					<span id="userText">Login</span>
+				</a>
+
+				<a href="./comparison.html" class="icon-btn">
+					<i class="icon fa-solid fa-scale-balanced"></i>
+					<span>Compare</span>
+				</a>
+
+				<a href="./wishlist.html" class="icon-btn">
+					<i class="icon fa-regular fa-heart"></i>
+					<span>Wishlist</span>
+				</a>
+
+				<a href="./basket.html" class="icon-btn">
+					<i class="icon fa-solid fa-cart-shopping"></i>
+					<span>Cart</span>
+					<span class="cart-badge">3</span>
+				</a>
+			</div>
+
+		</div>
+
+		<!-- Navigation -->
+		<div class="navigation">
+			<div class="nav-content">
+				<ul class="nav-menu">
+					<li>
+						<a href="#">Appliances</a>
+						<div class="mega-menu appliances">
+							<div class="mega-main-content">
+								<div class="mega-menu-sidebar">
+									<div class="sidebar-item">
+										<i class="fas fa-tshirt"></i>
+										<span>Laundry</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-utensils"></i>
+										<span>Dishwashers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item active">
+										<i class="fas fa-snowflake"></i>
+										<span>Fridges and Freezers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-fire-burner"></i>
+										<span>Cooking</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-blender"></i>
+										<span>Small Appliances</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-couch"></i>
+										<span>Home and Outdoors</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-spa"></i>
+										<span>Health and Beauty</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+								<div class="mega-menu-content">
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+											<a href="#" class="mega-menu-link">Tall</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Total No Frost</a>
+											<a href="#" class="mega-menu-link">Premium</a>
+											<a href="#" class="mega-menu-link">Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridges</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Fridges</a>
+											<a href="#" class="mega-menu-link">Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Larder Fridges</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">American Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">View All American Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">With Dispenser</a>
+											<a href="#" class="mega-menu-link">Multi door</a>
+											<a href="#" class="mega-menu-link">Non Plumbed</a>
+											<a href="#" class="mega-menu-link">American Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Integrated</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Fridges</a>
+											<a href="#" class="mega-menu-link">Freezers</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Freezers</a>
+											<a href="#" class="mega-menu-link">Upright Freezers</a>
+											<a href="#" class="mega-menu-link">Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Chest Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">View All Chest Freezers</a>
+											<a href="#" class="mega-menu-link">Fast Freeze</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Wine Coolers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Freestanding Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Integrated Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Slimline Wine coolers</a>
+											<a href="#" class="mega-menu-link">Black</a>
+											<a href="#" class="mega-menu-link">Stainless Steel</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Deals</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Finance</a>
+											<a href="#" class="mega-menu-link">Trade In</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">TV and Audio</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Televisions</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Smart TV</a>
+										<a href="#" class="mega-menu-link">4K TVs</a>
+										<a href="#" class="mega-menu-link">OLED TV</a>
+										<a href="#" class="mega-menu-link">QLED TV</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Audio</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Headphones</a>
+										<a href="#" class="mega-menu-link">Speakers</a>
+										<a href="#" class="mega-menu-link">Soundbar</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Computing and Gaming</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Computers</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Laptops</a>
+										<a href="#" class="mega-menu-link">Desktop PCs</a>
+										<a href="#" class="mega-menu-link">Tablets</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Gaming</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">PlayStation</a>
+										<a href="#" class="mega-menu-link">Xbox</a>
+										<a href="#" class="mega-menu-link">Nintendo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Mobile Phones</a></li>
+					<li><a href="#">Smart Tech</a></li>
+					<li><a href="#">Floorcare</a></li>
+					<li><a href="#" class="deals">Deals</a></li>
+					<li><a href="#">Gifts</a></li>
+					<li><a href="#">TechHouse Membership</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Catalog Modal -->
+	<div class="catalog-modal" id="catalogModal">
+		<div class="catalog-modal-header">
+			<div class="catalog-header-left">
+				<a href="./authPage.html">Login</a>
+				<a href="./authPage.html">Register</a>
+			</div>
+			<button class="catalog-close-btn" onclick="toggleCatalog()">
+				<i class="bi bi-x"></i>
+			</button>
+		</div>
+
+		<div class="catalog-modal-body">
+			<div class="catalog-sidebar">
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tshirt"></i>
+					<span>Laundry</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-utensils"></i>
+					<span>Dishwashers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item active">
+					<i class="fas fa-snowflake"></i>
+					<span>Fridges and Freezers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-fire-burner"></i>
+					<span>Cooking</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-blender"></i>
+					<span>Small Appliances</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-couch"></i>
+					<span>Home and Outdoors</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-spa"></i>
+					<span>Health and Beauty</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-mobile"></i>
+					<span>Mobile Phones</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-laptop"></i>
+					<span>Computing</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tv"></i>
+					<span>TV and Audio</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-gamepad"></i>
+					<span>Gaming</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Bottom Navigation -->
+	<div class="mobile-bottom-nav">
+		<div class="mobile-nav-items">
+			<a href="./index.html" class="mobile-nav-item active">
+				<i class="bi bi-house-door-fill"></i>
+				<span>Home</span>
+			</a>
+
+			<button class="mobile-nav-item" style="background-color: transparent; border: none;" onclick="toggleCatalog()">
+				<i class="bi bi-grid-3x3-gap"></i>
+				<span>Catalog</span>
+			</button>
+			<a href="./basket.html" class="mobile-nav-item">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span>Cart</span>
+				<span class="mobile-nav-badge">3</span>
+			</a>
+			<a href="./wishlist.html" class="mobile-nav-item">
+				<i class="fa-regular fa-heart"></i>
+				<span>Wishlist</span>
+			</a>
+			<a href="./authPage.html" class="mobile-nav-item">
+				<i class="fa-regular fa-user"></i>
+				<span>Login</span>
+			</a>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<main class="main">
+		<!-- Hero Slider -->
+		<section class="hero-slider">
+			<div class="slider slider-big">
+				<div class="slider-main">
+					<div class="slider-nav">
+						<button class="slider-btn">‹</button>
+						<button class="slider-btn">›</button>
+					</div>
+				</div>
+				<div class="slider-dots">
+					<div class="dot active"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
+			</div>
+
+			<div class="slider slider-smoll">
+				<div class="sidebar-offers">
+					<div class="offer-card">
+						<div class="offer-header">
+							<h3 class="sidebar-title">Deal of the Day</h3>
+							<div class="offer-timer">
+								<i class="far fa-clock"></i>
+								<span>27:04:22</span>
+							</div>
+						</div>
+
+						<div class="offer-main-content">
+							<div class="offer-image-container">
+								<img src="./images/product.png" alt="DeLonghi Kettle" class="offer-image">
+							</div>
+
+							<div class="offer-content">
+								<div class="offer-title">DeLonghi KBOV2001.BK Electric Kettle</div>
+								<div class="offer-installment"> 78,250 UZS / 18 months</div>
+								<div class="offer-price-row">
+									<div class="offer-price">939,000 UZS</div>
+									<button class="offer-btn-circle">
+										<i class="fas fa-shopping-cart"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="offer-nav">
+							<button class="offer-nav-btn">‹</button>
+							<button class="offer-nav-btn">›</button>
+						</div>
+					</div>
+				</div>
+				<div class="slider-dots">
+					<div class="dot active"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Categories Section -->
+		<section class="categories-section">
+			<div class="categories-wrapper">
+				<div class="category-nav">
+					<button class="category-nav-btn">‹</button>
+					<button class="category-nav-btn">›</button>
+				</div>
+				<div class="categories-scroll">
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Smartphones</h3>
+							<img src="./images/category.png" alt="Smartphones" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Air Conditioners</h3>
+							<img src="./images/category.png" alt="Air Conditioners" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Heaters</h3>
+							<img src="./images/category.png" alt="Heaters" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Vacuum Cleaners</h3>
+							<img src="./images/category.png" alt="Vacuum Cleaners" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Refrigerators</h3>
+							<img src="./images/category.png" alt="Refrigerators" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Laptops</h3>
+							<img src="./images/category.png" alt="Laptops" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Televisions</h3>
+							<img src="./images/category.png" alt="Televisions" class="category-image">
+						</a>
+					</div>
+
+					<div class="category-card">
+						<a href="#">
+							<h3 class="category-name">Audio Equipment</h3>
+							<img src="./images/category.png" alt="Audio Equipment" class="category-image">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Hit Products Section -->
+		<section class="products-section">
+			<div class="section-header">
+				<h2 class="section-title">Best Sellers</h2>
+				<a href="#" class="view-all-link">
+					View All ›
+				</a>
+			</div>
+			<div class="products-scroll">
+				<!-- Product 1 -->
+				<div class="product-card" data-product-id="1">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">24:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="Samsung Washing Machine" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">441,583 UZS / month</div>
+							<div class="product-stock in-stock">In Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 2 -->
+				<div class="product-card" data-product-id="2">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">36:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="LG Refrigerator" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">LG InstaView Door-in-Door Refrigerator</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.8</span>
+								<span class="rating-text">(89 reviews)</span>
+							</div>
+							<div class="product-installment">583,333 UZS / month</div>
+							<div class="product-stock in-stock">In Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">7,000,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">8,500,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 3 -->
+				<div class="product-card" data-product-id="3">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">12:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="Samsung TV" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Samsung 55" 4K UHD Smart QLED TV</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.7</span>
+								<span class="rating-text">(203 reviews)</span>
+							</div>
+							<div class="product-installment">291,667 UZS / month</div>
+							<div class="product-stock low-stock">Only 3 left</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">3,500,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">4,200,000 UZS</span>
+									<span class="discount-badge">-17%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 4  -->
+				<div class="product-card" data-product-id="4">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">6:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="iPhone" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Apple iPhone 14 Pro Max 256GB</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.9</span>
+								<span class="rating-text">(512 reviews)</span>
+							</div>
+							<div class="product-installment">1,166,667 UZS / month</div>
+							<div class="product-stock in-stock">In Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">7,000,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">8,000,000 UZS</span>
+									<span class="discount-badge">-12%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 5  -->
+				<div class="product-card" data-product-id="5">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">18:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="MacBook" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Apple MacBook Air M2 13.6" 8GB/256GB</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.8</span>
+								<span class="rating-text">(167 reviews)</span>
+							</div>
+							<div class="product-installment">666,667 UZS / month</div>
+							<div class="product-stock out-of-stock">Out of Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">8,000,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">9,500,000 UZS</span>
+									<span class="discount-badge">-16%</span>
+								</div>
+							</div>
+							<button class="cart-btn" disabled>
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 6  -->
+				<div class="product-card" data-product-id="6">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">3:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/product.png" alt="Sony Headphones" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Sony WH-1000XM5 Wireless Noise Cancelling</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.9</span>
+								<span class="rating-text">(421 reviews)</span>
+							</div>
+							<div class="product-installment">116,667 UZS / month</div>
+							<div class="product-stock in-stock">In Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">700,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">850,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 7 - Пылесос -->
+				<div class="product-card" data-product-id="7">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">9:0:0</span>
+							<span class="badge badge-popular">Popular</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/vacuum.jpg" alt="Dyson Vacuum" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Dyson V15 Detect Cordless Vacuum Cleaner</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.7</span>
+								<span class="rating-text">(156 reviews)</span>
+							</div>
+							<div class="product-installment">250,000 UZS / month</div>
+							<div class="product-stock in-stock">In Stock</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">1,500,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">1,800,000 UZS</span>
+									<span class="discount-badge">-17%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 8 - Микроволновка -->
+				<div class="product-card" data-product-id="8">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">6:0:0</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<a href="./cart.html">
+							<img src="./images/microwave.jpg" alt="Microwave" class="product-image">
+						</a>
+					</div>
+
+					<div class="product-info">
+						<a href="./cart.html">
+							<h3 class="product-title">Panasonic 23L Microwave Oven with Grill</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.5</span>
+								<span class="rating-text">(87 reviews)</span>
+							</div>
+							<div class="product-installment">83,333 UZS / month</div>
+							<div class="product-stock low-stock">Only 5 left</div>
+						</a>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">500,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">600,000 UZS</span>
+									<span class="discount-badge">-17%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Brands Section -->
+		<section class="brands-section">
+			<div class="container">
+				<div class="collections-header">
+					<h2 class="section-title">Popular Brands</h2>
+				</div>
+				<div class="brands-carousel">
+					<button class="carousel-nav">‹</button>
+					<div class="brands-scroll">
+						<div class="brand-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/LG_symbol.svg" alt="LG" class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" alt="Samsung"
+								class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="./images/brand-mi.png" alt="Xiaomi" class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="./images/brand-huawei.png" alt="Huawei" class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+								class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/LG_symbol.svg" alt="LG" class="brand-logo">
+						</div>
+						<div class="brand-card">
+							<img src="./images/brand-mi.png" alt="Xiaomi" class="brand-logo">
+						</div>
+					</div>
+					<button class="carousel-nav">›</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Collections Section -->
+		<section class="collections-section" id="collections">
+			<div class="container">
+				<div class="collections-header">
+					<h2 class="section-title">Collections</h2>
+					<a href="#" class="view-all-link">
+						View All →
+					</a>
+				</div>
+				<div class="filter-pills">
+					<button class="filter-pill active">1+1</button>
+					<button class="filter-pill">Clean and Fresh Air</button>
+					<button class="filter-pill">❄️ Preparing for Cold Winter Days</button>
+					<button class="filter-pill">Smartphones with Good Camera</button>
+					<button class="filter-pill">Automated Home Appliances</button>
+					<button class="filter-pill">New Cleaning Technology</button>
+					<button class="filter-pill">Smart Home</button>
+					<button class="filter-pill">Automation</button>
+				</div>
+			</div>
+			<div class="products-scroll">
+				<!-- Product 1 -->
+				<div class="product-card">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment"> 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product 2 -->
+				<div class="product-card">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">Cashback 20%</span>
+							<span class="badge view-all-badges"> <i class="bi bi-caret-right-fill"></i> </span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="icon fa-regular fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment"> 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 3 -->
+				<div class="product-card">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment"> 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 4 -->
+				<div class="product-card">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment"> 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 5 -->
+				<div class="product-card">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment"> 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- Membership Packages Section -->
+		<section class="membership-section">
+			<div class="container">
+				<div class="collections-header">
+					<h2 class="section-title">TechHouse Membership</h2>
+					<a href="#" class="view-all-link">
+						More Info →
+					</a>
+				</div>
+				<div class="membership-grid">
+					<!-- Bronze Package -->
+					<div class="membership-card bronze">
+						<div class="membership-header">
+							<div class="membership-icon">
+								<i class="fas fa-medal"></i>
+							</div>
+							<h3 class="membership-title">Bronze</h3>
+							<p class="membership-subtitle">Membership</p>
+						</div>
+						<div class="membership-body">
+							<ul class="membership-features">
+								<li><i class="fas fa-check"></i> Basic loyalty points</li>
+								<li><i class="fas fa-check"></i> Access to selected discounts</li>
+							</ul>
+						</div>
+						<button class="membership-btn bronze-btn">Select</button>
+					</div>
+
+					<!-- Silver Package -->
+					<div class="membership-card silver">
+						<div class="membership-header">
+							<div class="membership-icon">
+								<i class="fas fa-medal"></i>
+							</div>
+							<h3 class="membership-title">Silver</h3>
+							<p class="membership-subtitle">Membership</p>
+						</div>
+						<div class="membership-body">
+							<ul class="membership-features">
+								<li><i class="fas fa-check"></i> Enhanced loyalty points</li>
+								<li><i class="fas fa-check"></i> Priority customer service</li>
+								<li><i class="fas fa-check"></i> Monthly special offers</li>
+							</ul>
+						</div>
+						<button class="membership-btn silver-btn">Select</button>
+					</div>
+
+					<!-- Gold Package -->
+					<div class="membership-card gold popular">
+						<div class="membership-header">
+							<div class="membership-icon">
+								<i class="fas fa-crown"></i>
+							</div>
+							<h3 class="membership-title">Gold</h3>
+							<p class="membership-subtitle">Membership</p>
+						</div>
+						<div class="membership-body">
+							<ul class="membership-features">
+								<li><i class="fas fa-check"></i> Highest loyalty rewards</li>
+								<li><i class="fas fa-check"></i> Free delivery</li>
+								<li><i class="fas fa-check"></i> Early access to new products</li>
+							</ul>
+						</div>
+						<button class="membership-btn gold-btn">Select</button>
+					</div>
+
+					<!-- Business Package -->
+					<div class="membership-card business">
+						<div class="membership-header">
+							<div class="membership-icon">
+								<i class="fas fa-building"></i>
+							</div>
+							<h3 class="membership-title">Business</h3>
+							<p class="membership-subtitle">Wholesale</p>
+						</div>
+						<div class="membership-body">
+							<ul class="membership-features">
+								<li><i class="fas fa-check"></i> Bulk purchasing capability</li>
+								<li><i class="fas fa-check"></i> Special prices for organizations</li>
+							</ul>
+						</div>
+						<button class="membership-btn business-btn">Contact</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- News Section -->
+		<section class="news-section ">
+			<div class="collections-header">
+				<h2 class="section-title">News & Blogs</h2>
+				<a href="#" class="view-all-link">
+					View All →
+				</a>
+			</div>
+			<div class="news-grid">
+				<div class="news-card">
+					<div class="news-image">
+						<img src="./images/news.png" alt="Corporate Card">
+					</div>
+					<div class="news-content">
+						<div class="news-date">09 December 2025</div>
+						<a href="#" class="news-title">Shop at Technomart with Corporate Card</a>
+					</div>
+				</div>
+				<div class="news-card">
+					<div class="news-image">
+						<img src="./images/news.png" alt="iPhone 17">
+					</div>
+					<div class="news-date">15 September 2025</div>
+					<a href="#" class="news-title">iPhone 17: Review, Features</a>
+				</div>
+				<div class="news-card">
+					<div class="news-image">
+						<img src="./images/news.png" alt="Apple Watch">
+					</div>
+					<div class="news-date">15 September 2025</div>
+					<a href="#" class="news-title">Apple Watch 11, SE 3 and Ultra 3: Review</a>
+				</div>
+				<div class="news-card">
+					<div class="news-image">
+						<img src="./images/news.png" alt="Air Conditioner">
+					</div>
+					<div class="news-date">10 April 2023</div>
+					<a href="#" class="news-title">How to Choose an Air Conditioner for Your Home?</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- App Download Section -->
+		<section class="app-section">
+			<div class="app-main-container">
+				<div class="app-image-wrapper">
+					<img src="./images/app.png" alt="Mobile App" class="app-image">
+				</div>
+				<div class="app-content">
+					<h2 class="app-title">Download the App</h2>
+					<p class="app-description">Make purchases home using the mobile <br> app!</p>
+					<div class="app-footer">
+						<div class="qr-section">
+							<div class="qr-code">
+								<i class="fas fa-qrcode" style="font-size: 60px; color: var(--accent-gray);"></i>
+							</div>
+							<div class="qr-text">
+								<strong>Scan the QR code</strong><br>
+								and download the app
+							</div>
+						</div>
+						<div class="app-buttons">
+							<a target="_blank" href="#" class="app-btn app-btn-google">
+								<img width="114" height="40" src="./images/app2.png" alt="google play">
+							</a>
+							<a target="_blank" href="#" class="app-btn app-btn-apple">
+								<img width="114" height="40" src="./images/app2.png" alt="google play">
+							</a>
+							<a target="_blank" href="#" class="app-btn app-btn-gallery">
+								<img width="114" height="40" src="./images/app2.png" alt="google play">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features-section">
+			<h1 class="features-title">Smartphones and home appliances on installment</h1>
+			<div class="features-grid">
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="bi bi-truck"></i>
+					</div>
+					<div class="feature-content">
+						<h3 class="feature-title">Free Delivery</h3>
+						<p class="feature-description">For orders above 500,000 UZS.</p>
+					</div>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="bi bi-credit-card"></i>
+					</div>
+					<div class="feature-content">
+						<h3 class="feature-title">Installment Purchase</h3>
+						<p class="feature-description">Convenient installment plan</p>
+					</div>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="bi bi-shield-check"></i>
+					</div>
+					<div class="feature-content">
+						<h3 class="feature-title">Product Warranty</h3>
+						<p class="feature-description">Authorized repair or replacement</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Map Section -->
+		<section id="map">
+			<h1 class="map-title">Our Store Locations</h1>
+
+			<div class="map-container">
+				<div class="map-wrapper">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Blank_US_Map_%28states_only%29.svg/1200px-Blank_US_Map_%28states_only%29.svg.png"
+						alt="Our Store Locations" class="map-image">
+
+					<div class="marker marker-1">
+						<i class="bi bi-geo-alt-fill"></i>
+						<div class="tooltip">
+							<div class="tooltip-title">Boise Supermarket</div>
+							<div class="tooltip-city">Boise, Idaho</div>
+							<div class="tooltip-address">123 Main St, zip 83702</div>
+						</div>
+					</div>
+
+					<div class="marker marker-2">
+						<i class="bi bi-geo-alt-fill"></i>
+						<div class="tooltip">
+							<div class="tooltip-title">Billings Store</div>
+							<div class="tooltip-city">Billings, Montana</div>
+							<div class="tooltip-address">456 Oak St, zip 59101</div>
+						</div>
+					</div>
+
+					<div class="marker marker-3">
+						<i class="bi bi-geo-alt-fill"></i>
+						<div class="tooltip">
+							<div class="tooltip-title">Omaha Hypermarket</div>
+							<div class="tooltip-city">Omaha, Nebraska</div>
+							<div class="tooltip-address">789 Elm St, zip 68102</div>
+						</div>
+					</div>
+
+					<div class="marker marker-4">
+						<i class="bi bi-geo-alt-fill"></i>
+						<div class="tooltip">
+							<div class="tooltip-title">Albuquerque Warehouse Store</div>
+							<div class="tooltip-city">Albuquerque, New Mexico</div>
+							<div class="tooltip-address">321 Pine Hwy, zip 87101</div>
+						</div>
+					</div>
+
+					<div class="marker marker-5">
+						<i class="bi bi-geo-alt-fill"></i>
+						<div class="tooltip">
+							<div class="tooltip-title">Broadway Store</div>
+							<div class="tooltip-city">New York</div>
+							<div class="tooltip-address">654 Broadway, zip 10012</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="map-legend">
+					<div class="legend-item">
+						<i class="bi bi-geo-alt-fill legend-icon"></i>
+						<span>Our Stores</span>
+					</div>
+					<div class="legend-item">
+						<i class="bi bi-info-circle legend-icon"></i>
+						<span>Click marker to view information</span>
+					</div>
+				</div>
+			</div>
+			</s>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Contact Info -->
+				<div class="footer-column footer-contact-column">
+					<p class="footer-question">Have a question? Call us</p>
+					<a href="tel:+998712099944" class="footer-phone">+998 99 999 99 99</a>
+					<div class="footer-social">
+						<a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+						<a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+
+				<!-- Company -->
+				<div class="footer-column">
+					<h3 class="footer-title">Company</h3>
+					<ul class="footer-links">
+						<li><a href="#">For Legal Entities</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">News & Blogs</a></li>
+						<li><a href="#">Check IMEI</a></li>
+						<li><a href="#">Work at Technomart</a></li>
+					</ul>
+				</div>
+
+				<!-- Information -->
+				<div class="footer-column">
+					<h3 class="footer-title">Information</h3>
+					<ul class="footer-links">
+						<li><a href="#">Free Delivery</a></li>
+						<li><a href="#">Service Centers</a></li>
+						<li><a href="#">Personal Account</a></li>
+						<li><a href="#">Contact Numbers</a></li>
+						<li><a href="#">Public Offer Agreement</a></li>
+					</ul>
+				</div>
+
+				<!-- Support -->
+				<div class="footer-column">
+					<h3 class="footer-title">Customer Support</h3>
+					<ul class="footer-links">
+						<li><a href="#">Product Return</a></li>
+						<li><a href="#">Product Warranty</a></li>
+						<li><a href="#">Store Addresses</a></li>
+					</ul>
+				</div>
+
+				<!-- App Download -->
+				<div class="footer-column footer-app-column">
+					<h3 class="footer-title">Download the App</h3>
+					<div class="qr-content">
+						<div class="footer-qr">
+							<i class="fas fa-qrcode"></i>
+						</div>
+						<div class="qr-content-col">
+							<div class="footer-app-buttons">
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-google-play"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-apple"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fas fa-store"></i>
+								</a>
+							</div>
+							<p class="footer-qr-text">Scan QR code to<br>Download</p>
+							<img class="footer-arrow" width="50" height="30" src="./images/point-arrow.png" alt="point-arrow">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p class="footer-copyright">
+					2016-2025 © techouse.uz. All rights reserved. Product prices and purchase conditions are valid as of the
+					current date.
+				</p>
+				<div class="footer-payments">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa" class="payment-logo">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+						class="payment-logo">
+					<div class="payment-logo-box">Payme</div>
+					<div class="payment-logo-box">Click</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a class="fixirs" href="#top-bar">
+		<button class="scroll-top-btn">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+	</a>
+
+	<a class="fixirs" href="#">
+		<button class="message-btn" id="messageBtn">
+			<i class="fas fa-comment-dots"></i>
+		</button>
+	</a>
+
+	<div class="page-overlay"></div>
+	<script>
+		const menuItems = document.querySelectorAll('.nav-menu ')
+
+		const overlay = document.querySelector('.page-overlay')
+
+		menuItems.forEach(item => {
+			item.addEventListener('mouseenter', () => overlay.classList.add('active'))
+			item.addEventListener('mouseleave', () => overlay.classList.remove('active'))
+		})
+
+		//  Open Modal 
+		function toggleCatalog() {
+			const modal = document.getElementById('catalogModal')
+			const isActive = modal.classList.contains('active')
+
+			if (isActive) {
+				modal.classList.remove('active')
+				document.body.style.overflow = ''
+			} else {
+				modal.classList.add('active')
+				document.body.style.overflow = 'hidden'
+			}
+		}
+
+		// Prevent scroll on body when modal is open
+		window.addEventListener('resize', function () {
+			const modal = document.getElementById('catalogModal')
+			if (window.innerWidth > 768 && modal.classList.contains('active')) {
+				toggleCatalog()
+			}
+		});
+	</script>
+</body>
+
+</html>

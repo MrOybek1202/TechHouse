@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smartphones - Catalog</title>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/search.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<style>
+		.product-count {
+			font-size: 16px;
+			font-weight: normal;
+			color: #666;
+			margin-left: 10px;
+		}
+
+		.no-products {
+			text-align: center;
+			padding: 60px 20px;
+			background: white;
+			border-radius: 12px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			margin: 20px auto;
+			max-width: 500px;
+			width: 100%;
+			grid-column: 1 / -1;
+		}
+
+		.no-products i {
+			font-size: 60px;
+			color: #ccc;
+			margin-bottom: 20px;
+		}
+
+		.no-products h3 {
+			font-size: 24px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		.no-products p {
+			color: #666;
+			font-size: 16px;
+		}
+
+		.cart-btn.in-cart {
+			background: #ffc107 !important;
+			color: white !important;
+		}
+
+		.cart-btn.in-cart:hover {
+			background: #e0a800 !important;
+		}
+
+		.mini-modal {
+			position: fixed;
+			bottom: 100px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: white;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+			z-index: 999999;
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+			min-width: 280px;
+			max-width: 350px;
+			text-align: center;
+			animation: slideUpModal 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+		}
+
+		.mini-modal p {
+			margin: 0;
+			font-size: 16px;
+			color: #333;
+			line-height: 1.4;
+		}
+
+		.mini-modal button {
+			background: #0058ab;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: background 0.3s;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.mini-modal button a {
+			color: white;
+			text-decoration: none;
+		}
+
+		.mini-modal button:hover {
+			background: #004494;
+		}
+
+		@keyframes slideUpModal {
+			from {
+				transform: translateX(-50%) translateY(100px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateX(-50%) translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeOutModal {
+			to {
+				transform: translateX(-50%) translateY(100px);
+				opacity: 0;
+			}
+		}
+
+		.reset-filters-btn {
+			background: #f8f9fa;
+			color: #333;
+			border: 1px solid #ddd;
+			padding: 10px 20px;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 14px;
+			font-weight: 500;
+			transition: all 0.3s;
+			margin-bottom: 15px;
+			display: block;
+			width: 100%;
+		}
+
+		.reset-filters-btn:hover {
+			background: #e9ecef;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Header -->
+	<!-- Top Bar -->
+	<div class="top-bar" id="top-bar">
+		<div class="top-bar-content">
+			<div class="top-bar-left">
+				<div class="location">
+					<i class="bi bi-geo-alt-fill"></i>
+					<span>Tashkent</span>
+				</div>
+				<div class="phone">
+					<i class="bi bi-telephone-fill"></i>
+					<span>+998 (99) 999-99-99</span>
+				</div>
+			</div>
+			<div class="top-bar-right">
+				<a href="#footer">About Us</a>
+				<a href="./index.html#map">Stores</a>
+				<a href="#">Track Order</a>
+			</div>
+		</div>
+	</div>
+	<!-- Main Header -->
+	<div class="main-header">
+		<div class="header-content">
+			<a href="./index.html" class="logo">
+				<div class="logo-icon">T</div>
+				<div class="logo-text">
+					<div>
+						<span class="tech">TECH</span><span class="house">HOUSE</span>
+					</div>
+					<div class="logo-subtitle">House of Technology</div>
+				</div>
+			</a>
+
+			<button class="catalog-btn" onclick="toggleCatalog()">
+				<img src="./images/burger.png" alt="">
+				<span>Catalog</span>
+			</button>
+
+			<div class="search-container">
+				<div class="search-bar">
+					<input type="text" placeholder="Search products...">
+					<a href="./search.html" class="search-btn"><i class="bi bi-search"></i></a>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<a href="./authPage.html" class="icon-btn" id="userBtn">
+					<i class="icon fa-regular fa-user" id="userIcon"></i>
+					<span id="userText">Login</span>
+				</a>
+
+				<a href="./comparison.html" class="icon-btn">
+					<i class="icon fa-solid fa-scale-balanced"></i>
+					<span>Compare</span>
+				</a>
+
+				<a href="./wishlist.html" class="icon-btn">
+					<i class="icon fa-regular fa-heart"></i>
+					<span>Wishlist</span>
+				</a>
+
+				<a href="./basket.html" class="icon-btn">
+					<i class="icon fa-solid fa-cart-shopping"></i>
+					<span>Cart</span>
+					<span class="cart-badge">3</span>
+				</a>
+			</div>
+
+		</div>
+
+		<!-- Navigation -->
+		<div class="navigation">
+			<div class="nav-content">
+				<ul class="nav-menu">
+					<li>
+						<a href="#">Appliances</a>
+						<div class="mega-menu appliances">
+							<div class="mega-main-content">
+								<div class="mega-menu-sidebar">
+									<div class="sidebar-item">
+										<i class="fas fa-tshirt"></i>
+										<span>Laundry</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-utensils"></i>
+										<span>Dishwashers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item active">
+										<i class="fas fa-snowflake"></i>
+										<span>Fridges and Freezers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-fire-burner"></i>
+										<span>Cooking</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-blender"></i>
+										<span>Small Appliances</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-couch"></i>
+										<span>Home and Outdoors</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-spa"></i>
+										<span>Health and Beauty</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+								<div class="mega-menu-content">
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+											<a href="#" class="mega-menu-link">Tall</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Total No Frost</a>
+											<a href="#" class="mega-menu-link">Premium</a>
+											<a href="#" class="mega-menu-link">Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridges</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Fridges</a>
+											<a href="#" class="mega-menu-link">Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Larder Fridges</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">American Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">View All American Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">With Dispenser</a>
+											<a href="#" class="mega-menu-link">Multi door</a>
+											<a href="#" class="mega-menu-link">Non Plumbed</a>
+											<a href="#" class="mega-menu-link">American Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Integrated</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Fridges</a>
+											<a href="#" class="mega-menu-link">Freezers</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Freezers</a>
+											<a href="#" class="mega-menu-link">Upright Freezers</a>
+											<a href="#" class="mega-menu-link">Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Chest Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">View All Chest Freezers</a>
+											<a href="#" class="mega-menu-link">Fast Freeze</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Wine Coolers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Freestanding Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Integrated Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Slimline Wine coolers</a>
+											<a href="#" class="mega-menu-link">Black</a>
+											<a href="#" class="mega-menu-link">Stainless Steel</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Deals</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Finance</a>
+											<a href="#" class="mega-menu-link">Trade In</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">TV and Audio</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Televisions</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Smart TV</a>
+										<a href="#" class="mega-menu-link">4K TVs</a>
+										<a href="#" class="mega-menu-link">OLED TV</a>
+										<a href="#" class="mega-menu-link">QLED TV</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Audio</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Headphones</a>
+										<a href="#" class="mega-menu-link">Speakers</a>
+										<a href="#" class="mega-menu-link">Soundbar</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Computing and Gaming</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Computers</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Laptops</a>
+										<a href="#" class="mega-menu-link">Desktop PCs</a>
+										<a href="#" class="mega-menu-link">Tablets</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Gaming</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">PlayStation</a>
+										<a href="#" class="mega-menu-link">Xbox</a>
+										<a href="#" class="mega-menu-link">Nintendo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Mobile Phones</a></li>
+					<li><a href="#">Smart Tech</a></li>
+					<li><a href="#">Floorcare</a></li>
+					<li><a href="#" class="deals">Deals</a></li>
+					<li><a href="#">Gifts</a></li>
+					<li><a href="#">TechHouse Membership</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!-- Catalog Modal -->
+	<div class="catalog-modal" id="catalogModal">
+		<div class="catalog-modal-header">
+			<div class="catalog-header-left">
+				<a href="./authPage.html">Login</a>
+				<a href="./authPage.html">Register</a>
+			</div>
+			<button class="catalog-close-btn" onclick="toggleCatalog()">
+				<i class="bi bi-x"></i>
+			</button>
+		</div>
+
+		<div class="catalog-modal-body">
+			<div class="catalog-sidebar">
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tshirt"></i>
+					<span>Laundry</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-utensils"></i>
+					<span>Dishwashers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item active">
+					<i class="fas fa-snowflake"></i>
+					<span>Fridges and Freezers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-fire-burner"></i>
+					<span>Cooking</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-blender"></i>
+					<span>Small Appliances</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-couch"></i>
+					<span>Home and Outdoors</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-spa"></i>
+					<span>Health and Beauty</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-mobile"></i>
+					<span>Mobile Phones</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-laptop"></i>
+					<span>Computing</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tv"></i>
+					<span>TV and Audio</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-gamepad"></i>
+					<span>Gaming</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Bottom Navigation -->
+	<div class="mobile-bottom-nav">
+		<div class="mobile-nav-items">
+			<a href="./index.html" class="mobile-nav-item active">
+				<i class="bi bi-house-door-fill"></i>
+				<span>Home</span>
+			</a>
+
+			<button class="mobile-nav-item" style="background-color: transparent; border: none;" onclick="toggleCatalog()">
+				<i class="bi bi-grid-3x3-gap"></i>
+				<span>Catalog</span>
+			</button>
+			<a href="./basket.html" class="mobile-nav-item">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span>Cart</span>
+				<span class="mobile-nav-badge">3</span>
+			</a>
+			<a href="./wishlist.html" class="mobile-nav-item">
+				<i class="fa-regular fa-heart"></i>
+				<span>Wishlist</span>
+			</a>
+			<a href="./authPage.html" class="mobile-nav-item">
+				<i class="fa-regular fa-user"></i>
+				<span>Login</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="main">
+		<section>
+			<div class="breadcrumb">
+				<a href="#">Home</a>
+				<span>/</span>
+				<span>Smartphones</span>
+			</div>
+
+			<div class="page-header">
+				<div class="page-title">
+					<span class="back-btn"><i class="bi bi-chevron-left"></i></span>
+					Smartphones
+				</div>
+			</div>
+
+			<div class="sort-section">
+				<button class="filter-mobile-btn" onclick="toggleFilters()">
+					<i class="bi bi-funnel"></i>
+					Filters
+				</button>
+				<div class="sort-btn">
+					<i class="bi bi-arrow-down-up"></i>
+					By Popularity
+				</div>
+				<div class="view-toggle">
+					<button class="view-btn" id="listViewBtn">
+						<i class="bi bi-list-ul"></i>
+					</button>
+					<button class="view-btn active" id="tileViewBtn">
+						<i class="bi bi-grid-3x3-gap"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="layout">
+				<aside class="sidebar" id="sidebar">
+					<button class="reset-filters-btn" onclick="resetAllFilters()">
+						<i class="fas fa-redo"></i> Clear Filters
+					</button>
+					<div class="filter-header">
+						<h3>Filters</h3>
+						<button class="close-filters" onclick="toggleFilters()">×</button>
+					</div>
+					<div class="filter-group">
+						<h3 class="filter-title">Price (UZS)</h3>
+						<div class="price-range">
+							<input type="text" class="price-input" placeholder="From 4,500 UZS">
+							<div>-</div>
+							<input type="text" class="price-input" placeholder="Up to 300,500 UZS">
+						</div>
+					</div>
+
+					<div class="filter-group">
+						<h3 class="filter-title">Storage</h3>
+						<div class="checkbox-item">
+							<input type="checkbox" id="mem1">
+							<label for="mem1">128 GB</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="mem2">
+							<label for="mem2">256 GB</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="mem3">
+							<label for="mem3">64 GB</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="mem4">
+							<label for="mem4">512 GB</label>
+						</div>
+						<span class="show-more">Show More</span>
+					</div>
+
+					<div class="filter-group">
+						<h3 class="filter-title">RAM</h3>
+						<div class="checkbox-item">
+							<input type="checkbox" id="ram1">
+							<label for="ram1">1 GB</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="ram2">
+							<label for="ram2">2 GB</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="ram3">
+							<label for="ram3">3 GB</label>
+						</div>
+						<span class="show-more">Show More</span>
+					</div>
+
+					<div class="filter-group">
+						<h3 class="filter-title">Brand</h3>
+						<div class="checkbox-item">
+							<input type="checkbox" id="brand1">
+							<label for="brand1">Apple</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="brand2">
+							<label for="brand2">Honor</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="brand3">
+							<label for="brand3">Samsung</label>
+						</div>
+						<span class="show-more">Show More</span>
+					</div>
+
+					<div class="filter-group">
+						<h3 class="filter-title">Cores</h3>
+						<div class="checkbox-item">
+							<input type="checkbox" id="core1">
+							<label for="core1">4</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="core2">
+							<label for="core2">6</label>
+						</div>
+						<div class="checkbox-item">
+							<input type="checkbox" id="core3">
+							<label for="core3">8</label>
+						</div>
+					</div>
+
+					<span class="show-more">Show All Filters</span>
+				</aside>
+
+				<div class="products-grid" id="productGrid">
+					<div class="product-search-row">
+						<!-- Product 1 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Apple iPhone 14 128GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.1"/2532x1170</div>
+											<div>Cores: 6</div>
+											<div>Power: 20W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.6</span>
+											<span class="rating-text">(145 reviews)</span>
+										</div>
+										<div class="product-installment">From 291,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">8,499,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">9,299,000 UZS</span>
+												<span class="discount-badge">-8%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 2 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Samsung Galaxy S23 Ultra 256GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.8"/3088x1440</div>
+											<div>Cores: 8</div>
+											<div>Power: 45W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.8</span>
+											<span class="rating-text">(256 reviews)</span>
+										</div>
+										<div class="product-installment">From 541,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">12,499,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">13,299,000 UZS</span>
+												<span class="discount-badge">-6%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 3 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Xiaomi 13 Pro 512GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.73"/3200x1440</div>
+											<div>Cores: 8</div>
+											<div>Power: 120W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.7</span>
+											<span class="rating-text">(189 reviews)</span>
+										</div>
+										<div class="product-installment">From 391,583 UZS / month</div>
+										<div class="product-stock out-of-stock">Out of Stock</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">9,699,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">10,299,000 UZS</span>
+												<span class="discount-badge">-6%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 4 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Honor Magic 5 Pro 256GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.81"/2848x1312</div>
+											<div>Cores: 8</div>
+											<div>Power: 66W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.5</span>
+											<span class="rating-text">(98 reviews)</span>
+										</div>
+										<div class="product-installment">From 341,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">8,299,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">8,999,000 UZS</span>
+												<span class="discount-badge">-8%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="product-search-row">
+						<!-- Product 5 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">OnePlus 11 256GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.7"/3216x1440</div>
+											<div>Cores: 8</div>
+											<div>Power: 100W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.6</span>
+											<span class="rating-text">(124 reviews)</span>
+										</div>
+										<div class="product-installment">From 441,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">10,499,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">11,299,000 UZS</span>
+												<span class="discount-badge">-7%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 6 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Google Pixel 8 Pro 128GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.7"/2992x1344</div>
+											<div>Cores: 9</div>
+											<div>Power: 30W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.7</span>
+											<span class="rating-text">(201 reviews)</span>
+										</div>
+										<div class="product-installment">From 441,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">9,799,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">10,499,000 UZS</span>
+												<span class="discount-badge">-7%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 7 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Realme GT 3 256GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.74"/2772x1240</div>
+											<div>Cores: 8</div>
+											<div>Power: 240W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.4</span>
+											<span class="rating-text">(87 reviews)</span>
+										</div>
+										<div class="product-installment">From 241,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">5,599,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">6,299,000 UZS</span>
+												<span class="discount-badge">-11%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Product 8 -->
+						<div class="product-card">
+							<a href="#" class="product-card-inner">
+								<div class="product-image-wrapper">
+									<div class="product-badges">
+										<span class="badge">50:0:2</span>
+									</div>
+									<div class="product-actions">
+										<button class="action-btn">
+											<i class="far fa-heart"></i>
+										</button>
+										<button class="action-btn">
+											<i class="fas fa-balance-scale"></i>
+										</button>
+									</div>
+									<img src="./images/product.png" alt="Smartphone" class="product-image">
+								</div>
+								<div class="product-info">
+									<div class="product-center">
+										<h3 class="product-title">Oppo Find X6 Pro 512GB</h3>
+										<div class="product-specs">
+											<div>Screen: 6.82"/3168x1440</div>
+											<div>Cores: 8</div>
+											<div>Power: 100W</div>
+										</div>
+										<div class="product-rating">
+											<span class="stars">⭐ 4.8</span>
+											<span class="rating-text">(178 reviews)</span>
+										</div>
+										<div class="product-installment">From 491,583 UZS / month</div>
+										<div class="product-stock">Available</div>
+									</div>
+									<div class="product-footer">
+										<div class="product-prices">
+											<span class="current-price">11,199,000 UZS</span>
+											<div class="price-row">
+												<span class="old-price">11,999,000 UZS</span>
+												<span class="discount-badge">-7%</span>
+											</div>
+										</div>
+										<div class="footor-buttons">
+											<button class="cart-btn">
+												<i class="fas fa-shopping-cart"></i>
+												<span>To Cart</span>
+											</button>
+											<div class="product-actions-bottom">
+												<button class="action-btn">
+													<i class="far fa-heart"></i>
+												</button>
+												<button class="action-btn">
+													<i class="fas fa-balance-scale"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="products-section">
+			<div class="section-header">
+				<h2 class="section-title">Recently Viewed Products</h2>
+				<a href="#" class="view-all-link">
+					View All ›
+				</a>
+			</div>
+			<div class="products-scroll">
+				<!-- Product 1 -->
+				<div class="product-card-search">
+					<a href="./cart.html">
+						<div class="product-image-wrapper">
+							<div class="product-badges">
+								<span class="badge badge-credit">50:0:2</span>
+							</div>
+							<div class="product-actions">
+								<button class="action-btn">
+									<i class="far fa-heart"></i>
+								</button>
+								<button class="action-btn">
+									<i class="fas fa-balance-scale"></i>
+								</button>
+							</div>
+							<img src="./images/product.png" alt="Samsung" class="product-image">
+						</div>
+						<div class="product-info">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">From 441,583 UZS / month</div>
+							<div class="product-stock">In Stock</div>
+							<div class="product-footer">
+								<div class="product-prices">
+									<span class="current-price">5,299,000 UZS</span>
+									<div class="price-row">
+										<span class="old-price">6,299,000 UZS</span>
+										<span class="discount-badge">-18%</span>
+									</div>
+								</div>
+								<button class="cart-btn">
+									<i class="fas fa-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- Product 2 -->
+				<div class="product-card-search">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">Cashback 20%</span>
+							<span class="badge view-all-badges"> <i class="bi bi-caret-right-fill"></i> </span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="icon fa-regular fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment">From 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 3 -->
+				<div class="product-card-search">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment">From 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 4 -->
+				<div class="product-card-search">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment">From 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 5 -->
+				<div class="product-card-search">
+					<div class="product-image-wrapper">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale"></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info">
+						<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+						<div class="product-rating">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment">From 441,583 UZS / month</div>
+						<div class="product-stock">In Stock</div>
+						<div class="product-footer">
+							<div class="product-prices">
+								<span class="current-price">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price">6,299,000 UZS</span>
+									<span class="discount-badge">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Contact Info -->
+				<div class="footer-column footer-contact-column">
+					<p class="footer-question">Have a question? Call us</p>
+					<a href="tel:+998712099944" class="footer-phone">+998 99 999 99 99</a>
+					<div class="footer-social">
+						<a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+						<a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+
+				<!-- Company -->
+				<div class="footer-column">
+					<h3 class="footer-title">Company</h3>
+					<ul class="footer-links">
+						<li><a href="#">For Legal Entities</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">News & Blogs</a></li>
+						<li><a href="#">Check IMEI</a></li>
+						<li><a href="#">Work at Technomart</a></li>
+					</ul>
+				</div>
+
+				<!-- Information -->
+				<div class="footer-column">
+					<h3 class="footer-title">Information</h3>
+					<ul class="footer-links">
+						<li><a href="#">Free Delivery</a></li>
+						<li><a href="#">Service Centers</a></li>
+						<li><a href="#">Personal Account</a></li>
+						<li><a href="#">Contact Numbers</a></li>
+						<li><a href="#">Public Offer Agreement</a></li>
+					</ul>
+				</div>
+
+				<!-- Support -->
+				<div class="footer-column">
+					<h3 class="footer-title">Customer Support</h3>
+					<ul class="footer-links">
+						<li><a href="#">Product Return</a></li>
+						<li><a href="#">Product Warranty</a></li>
+						<li><a href="#">Store Addresses</a></li>
+					</ul>
+				</div>
+
+				<!-- App Download -->
+				<div class="footer-column footer-app-column">
+					<h3 class="footer-title">Download the App</h3>
+					<div class="qr-content">
+						<div class="footer-qr">
+							<i class="fas fa-qrcode"></i>
+						</div>
+						<div class="qr-content-col">
+							<div class="footer-app-buttons">
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-google-play"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-apple"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fas fa-store"></i>
+								</a>
+							</div>
+							<p class="footer-qr-text">Scan QR code<br>to Download</p>
+							<img class="footer-arrow" width="50" height="30" src="./images/point-arrow.png" alt="point-arrow">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p class="footer-copyright">
+					2016-2025 © techouse.uz. All rights reserved. Product prices and purchase conditions are valid as of the
+					current date.
+				</p>
+				<div class="footer-payments">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa" class="payment-logo">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+						class="payment-logo">
+					<div class="payment-logo-box">Payme</div>
+					<div class="payment-logo-box">Click</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#top-bar">
+		<button class="scroll-top-btn">
+
+			<i class="fas fa-arrow-up"></i>
+		</button>
+	</a>
+
+	<a href="#">
+		<button class="message-btn" id="messageBtn">
+			<i class="fas fa-comment-dots"></i>
+		</button>
+	</a>
+	<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleFilters()"></div>
+	<script>
+		const listBtn = document.getElementById('listViewBtn')
+		const tileBtn = document.getElementById('tileViewBtn')
+		const productGrid = document.getElementById('productGrid')
+
+		listBtn.addEventListener('click', function () {
+			productGrid.classList.add('list-view')
+			listBtn.classList.add('active')
+			tileBtn.classList.remove('active')
+		})
+
+		tileBtn.addEventListener('click', function () {
+			productGrid.classList.remove('list-view')
+			tileBtn.classList.add('active')
+			listBtn.classList.remove('active')
+		})
+
+		function toggleFilters() {
+			const sidebar = document.getElementById('sidebar')
+			const overlay = document.getElementById('sidebarOverlay')
+			sidebar.classList.toggle('mobile-open')
+			overlay.classList.toggle('active')
+		}
+
+		function setListView() {
+			document.getElementById('productGrid').classList.add('list-view')
+			document.getElementById('listViewBtn').classList.add('active')
+			document.getElementById('tileViewBtn').classList.remove('active')
+		}
+
+		function setTileView() {
+			document.getElementById('productGrid').classList.remove('list-view')
+			document.getElementById('tileViewBtn').classList.add('active')
+			document.getElementById('listViewBtn').classList.remove('active')
+		}
+
+		function toggleCatalog() {
+			const modal = document.getElementById('catalogModal')
+			const isActive = modal.classList.contains('active')
+
+			if (isActive) {
+				modal.classList.remove('active')
+				document.body.style.overflow = ''
+			} else {
+				modal.classList.add('active')
+				document.body.style.overflow = 'hidden'
+			}
+		}
+
+		window.addEventListener('resize', function () {
+			const modal = document.getElementById('catalogModal')
+			if (window.innerWidth > 768 && modal.classList.contains('active')) {
+				toggleCatalog()
+			}
+		})
+
+
+		class ProductManager {
+			constructor() {
+				this.products = []
+				this.filteredProducts = []
+				this.filters = {
+					priceMin: null,
+					priceMax: null,
+					memory: [],
+					ram: [],
+					brand: [],
+					cores: []
+				}
+
+				this.init()
+			}
+
+			init() {
+				this.loadProducts()
+				this.setupFilters()
+				this.displayProducts()
+				this.syncIcons()
+				this.setupEventListeners()
+			}
+
+			loadProducts() {
+				const savedProducts = JSON.parse(localStorage.getItem('products'))
+
+				if (savedProducts && savedProducts.length > 0) {
+					this.products = savedProducts
+				} else {
+					this.products = this.createSampleProducts()
+					localStorage.setItem('products', JSON.stringify(this.products))
+				}
+
+				this.filteredProducts = [...this.products]
+			}
+
+			createSampleProducts() {
+				return [
+					{
+						id: 1,
+						title: "Apple iPhone 14 128GB",
+						price: 8499000,
+						oldPrice: 9299000,
+						discount: 8,
+						image: "./images/iphone14.jpg",
+						brand: "Apple",
+						memory: "128 GB",
+						ram: "6 GB",
+						cores: 6,
+						specs: {
+							screen: "6.1\"/2532x1170",
+							power: "20W"
+						},
+						rating: 4.6,
+						reviews: 145,
+						installment: 291583,
+						inStock: true
+					},
+					{
+						id: 2,
+						title: "Samsung Galaxy S23 Ultra 256GB",
+						price: 12499000,
+						oldPrice: 13299000,
+						discount: 6,
+						image: "./images/s23ultra.jpg",
+						brand: "Samsung",
+						memory: "256 GB",
+						ram: "8 GB",
+						cores: 8,
+						specs: {
+							screen: "6.8\"/3088x1440",
+							power: "45W"
+						},
+						rating: 4.8,
+						reviews: 256,
+						installment: 541583,
+						inStock: true
+					},
+					{
+						id: 3,
+						title: "Xiaomi 13 Pro 512GB",
+						price: 9699000,
+						oldPrice: 10299000,
+						discount: 6,
+						image: "./images/xiaomi13.jpg",
+						brand: "Xiaomi",
+						memory: "512 GB",
+						ram: "12 GB",
+						cores: 8,
+						specs: {
+							screen: "6.73\"/3200x1440",
+							power: "120W"
+						},
+						rating: 4.7,
+						reviews: 189,
+						installment: 391583,
+						inStock: false
+					},
+					{
+						id: 4,
+						title: "Honor Magic 5 Pro 256GB",
+						price: 8299000,
+						oldPrice: 8999000,
+						discount: 8,
+						image: "./images/honor5pro.jpg",
+						brand: "Honor",
+						memory: "256 GB",
+						ram: "12 GB",
+						cores: 8,
+						specs: {
+							screen: "6.81\"/2848x1312",
+							power: "66W"
+						},
+						rating: 4.5,
+						reviews: 98,
+						installment: 341583,
+						inStock: true
+					},
+					{
+						id: 5,
+						title: "OnePlus 11 256GB",
+						price: 10499000,
+						oldPrice: 11299000,
+						discount: 7,
+						image: "./images/oneplus11.jpg",
+						brand: "OnePlus",
+						memory: "256 GB",
+						ram: "16 GB",
+						cores: 8,
+						specs: {
+							screen: "6.7\"/3216x1440",
+							power: "100W"
+						},
+						rating: 4.6,
+						reviews: 124,
+						installment: 441583,
+						inStock: true
+					},
+					{
+						id: 6,
+						title: "Google Pixel 8 Pro 128GB",
+						price: 9799000,
+						oldPrice: 10499000,
+						discount: 7,
+						image: "./images/pixel8.jpg",
+						brand: "Google",
+						memory: "128 GB",
+						ram: "12 GB",
+						cores: 9,
+						specs: {
+							screen: "6.7\"/2992x1344",
+							power: "30W"
+						},
+						rating: 4.7,
+						reviews: 201,
+						installment: 441583,
+						inStock: true
+					},
+					{
+						id: 7,
+						title: "Realme GT 3 256GB",
+						price: 5599000,
+						oldPrice: 6299000,
+						discount: 11,
+						image: "./images/realme3.jpg",
+						brand: "Realme",
+						memory: "256 GB",
+						ram: "12 GB",
+						cores: 8,
+						specs: {
+							screen: "6.74\"/2772x1240",
+							power: "240W"
+						},
+						rating: 4.4,
+						reviews: 87,
+						installment: 241583,
+						inStock: true
+					},
+					{
+						id: 8,
+						title: "Oppo Find X6 Pro 512GB",
+						price: 11199000,
+						oldPrice: 11999000,
+						discount: 7,
+						image: "./images/oppox6.jpg",
+						brand: "Oppo",
+						memory: "512 GB",
+						ram: "16 GB",
+						cores: 8,
+						specs: {
+							screen: "6.82\"/3168x1440",
+							power: "100W"
+						},
+						rating: 4.8,
+						reviews: 178,
+						installment: 491583,
+						inStock: true
+					},
+					{
+						id: 9,
+						title: "Apple iPhone 15 Pro 256GB",
+						price: 12999000,
+						oldPrice: 13999000,
+						discount: 7,
+						image: "./images/iphone15.jpg",
+						brand: "Apple",
+						memory: "256 GB",
+						ram: "8 GB",
+						cores: 6,
+						specs: {
+							screen: "6.1\"/2556x1179",
+							power: "25W"
+						},
+						rating: 4.9,
+						reviews: 312,
+						installment: 541583,
+						inStock: true
+					},
+					{
+						id: 10,
+						title: "Samsung Galaxy A54 128GB",
+						price: 4999000,
+						oldPrice: 5599000,
+						discount: 11,
+						image: "./images/a54.jpg",
+						brand: "Samsung",
+						memory: "128 GB",
+						ram: "8 GB",
+						cores: 8,
+						specs: {
+							screen: "6.4\"/2340x1080",
+							power: "25W"
+						},
+						rating: 4.3,
+						reviews: 145,
+						installment: 191583,
+						inStock: true
+					}
+				]
+			}
+
+			setupFilters() {
+				const priceInputs = document.querySelectorAll('.price-input')
+
+				priceInputs[0].addEventListener('change', (e) => {
+					const value = this.parsePrice(e.target.value)
+					this.filters.priceMin = value
+					this.applyFilters()
+				})
+
+				priceInputs[1].addEventListener('change', (e) => {
+					const value = this.parsePrice(e.target.value)
+					this.filters.priceMax = value
+					this.applyFilters()
+				})
+
+				document.querySelectorAll('.checkbox-item input').forEach(checkbox => {
+					checkbox.addEventListener('change', (e) => {
+						const filterType = e.target.closest('.filter-group').querySelector('.filter-title').textContent
+						const value = e.target.nextElementSibling.textContent.trim()
+
+						this.updateFilter(filterType, value, e.target.checked)
+						this.applyFilters()
+					})
+				})
+			}
+
+			updateFilter(filterType, value, isChecked) {
+				switch (filterType) {
+					case 'Storage':
+						if (isChecked) {
+							this.filters.memory.push(value)
+						} else {
+							this.filters.memory = this.filters.memory.filter(m => m !== value)
+						}
+						break
+
+					case 'RAM':
+						if (isChecked) {
+							this.filters.ram.push(value)
+						} else {
+							this.filters.ram = this.filters.ram.filter(r => r !== value)
+						}
+						break
+
+					case 'Brand':
+						if (isChecked) {
+							this.filters.brand.push(value)
+						} else {
+							this.filters.brand = this.filters.brand.filter(b => b !== value)
+						}
+						break
+
+					case 'Cores':
+						if (isChecked) {
+							this.filters.cores.push(parseInt(value))
+						} else {
+							this.filters.cores = this.filters.cores.filter(c => c !== parseInt(value))
+						}
+						break
+				}
+			}
+
+			applyFilters() {
+				let filtered = [...this.products]
+
+				if (this.filters.priceMin !== null) {
+					filtered = filtered.filter(product => product.price >= this.filters.priceMin)
+				}
+
+				if (this.filters.priceMax !== null) {
+					filtered = filtered.filter(product => product.price <= this.filters.priceMax)
+				}
+
+				if (this.filters.memory.length > 0) {
+					filtered = filtered.filter(product => this.filters.memory.includes(product.memory))
+				}
+
+				if (this.filters.ram.length > 0) {
+					filtered = filtered.filter(product => this.filters.ram.includes(product.ram))
+				}
+
+				if (this.filters.brand.length > 0) {
+					filtered = filtered.filter(product => this.filters.brand.includes(product.brand))
+				}
+
+				if (this.filters.cores.length > 0) {
+					filtered = filtered.filter(product => this.filters.cores.includes(product.cores))
+				}
+
+				this.filteredProducts = filtered
+				this.displayProducts()
+				this.updateProductCount()
+			}
+
+			displayProducts() {
+				const container = document.getElementById('productGrid')
+				if (!container) return
+
+				const existingRows = container.querySelectorAll('.product-search-row')
+
+				existingRows.forEach(row => row.remove())
+
+				if (this.filteredProducts.length === 0) {
+					container.innerHTML = `
+										<div class="no-products">
+												<i class="fas fa-search"></i>
+												<h3>No products found</h3>
+												<p>No products match the selected filters</p>
+										</div>
+								`
+					return
+				}
+
+				let currentRow
+				let rowCount = 0
+
+				this.filteredProducts.forEach((product, index) => {
+					if (index % 4 === 0) {
+						currentRow = document.createElement('div')
+						currentRow.className = 'product-search-row'
+						container.appendChild(currentRow)
+						rowCount++
+					}
+
+					const productCard = this.createProductCard(product)
+					currentRow.appendChild(productCard)
+				})
+
+				this.syncIcons()
+			}
+
+			createProductCard(product) {
+				const card = document.createElement('div')
+				card.className = 'product-card'
+				card.dataset.productId = product.id
+
+				const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+				const compare = JSON.parse(localStorage.getItem('comparison')) || []
+				const cart = JSON.parse(localStorage.getItem('cart')) || []
+
+				const inWishlist = wishlist.some(item => item.id === product.id)
+				const inCompare = compare.some(item => item.id === product.id)
+				const inCart = cart.some(item => item.id === product.id)
+
+				card.innerHTML = `
+								<div class="product-card-inner">
+										<div class="product-image-wrapper">
+												<div class="product-badges">
+														<span class="badge">50:0:2</span>
+														${product.discount ? `<span class="badge discount-badge">-${product.discount}%</span>` : ''}
+												</div>
+												<div class="product-actions">
+														<button class="action-btn wishlist-btn" data-id="${product.id}">
+																<i class="${inWishlist ? 'fas' : 'far'} fa-heart" style="${inWishlist ? 'color: #dc3545;' : ''}"></i>
+														</button>
+														<button class="action-btn compare-btn" data-id="${product.id}">
+																<i class="fas fa-balance-scale" style="${inCompare ? 'color: #0058ab;' : ''}"></i>
+														</button>
+												</div>
+												<a href="./cart.html">
+												<img src="${product.image}" alt="${product.title}" class="product-image" onerror="this.src='./images/product.png'">
+												</a>
+										</div>
+										<div class="product-info">
+												<a href="./cart.html">
+												<div class="product-center">
+														<h3 class="product-title">${product.title}</h3>
+														<div class="product-specs">
+																<div>Screen: ${product.specs.screen}</div>
+																<div>Cores: ${product.cores}</div>
+																<div>Power: ${product.specs.power}</div>
+														</div>
+														<div class="product-rating">
+																<span class="stars">⭐ ${product.rating}</span>
+																<span class="rating-text">(${product.reviews} reviews)</span>
+														</div>
+														<div class="product-installment">${this.formatPrice(product.installment)} UZS from / month</div>
+														<div class="product-stock ${product.inStock ? '' : 'out-of-stock'}">
+																${product.inStock ? 'Available' : 'Out of Stock'}
+														</div>
+												</div>
+												</a>
+												<div class="product-footer">
+														<div class="product-prices">
+																<span class="current-price">${this.formatPrice(product.price)} UZS</span>
+																<div class="price-row">
+																		<span class="old-price">${this.formatPrice(product.oldPrice)} UZS</span>
+																		${product.discount ? `<span class="discount-badge">-${product.discount}%</span>` : ''}
+																</div>
+														</div>
+														<div class="footor-buttons">
+																<button class="cart-btn ${inCart ? 'in-cart' : ''}" data-id="${product.id}">
+																		<i class="${inCart ? 'fas fa-check' : 'fas fa-shopping-cart'}"></i>
+																		<span>${inCart ? 'In Cart' : 'To Cart'}</span>
+																</button>
+																<div class="product-actions-bottom">
+																		<button class="action-btn wishlist-btn-bottom" data-id="${product.id}">
+																				<i class="${inWishlist ? 'fas' : 'far'} fa-heart" style="${inWishlist ? 'color: #dc3545;' : ''}"></i>
+																		</button>
+																		<button class="action-btn compare-btn-bottom" data-id="${product.id}">
+																				<i class="fas fa-balance-scale" style="${inCompare ? 'color: #0058ab;' : ''}"></i>
+																		</button>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						`
+
+				return card
+			}
+
+			setupEventListeners() {
+				document.addEventListener('click', (e) => {
+
+					if (e.target.closest('.cart-btn')) {
+						e.preventDefault()
+						const btn = e.target.closest('.cart-btn')
+						const productId = parseInt(btn.dataset.id)
+						if (productId) {
+							this.toggleCart(productId, btn)
+						}
+					}
+
+					if (e.target.closest('.wishlist-btn') || e.target.closest('.wishlist-btn-bottom')) {
+						e.preventDefault()
+						const btn = e.target.closest('.wishlist-btn') || e.target.closest('.wishlist-btn-bottom')
+						const productId = parseInt(btn.dataset.id)
+						if (productId) {
+							this.toggleWishlist(productId)
+						}
+					}
+
+					if (e.target.closest('.compare-btn') || e.target.closest('.compare-btn-bottom')) {
+						e.preventDefault()
+						const btn = e.target.closest('.compare-btn') || e.target.closest('.compare-btn-bottom')
+						const productId = parseInt(btn.dataset.id)
+						if (productId) {
+							this.toggleCompare(productId)
+						}
+					}
+				})
+			}
+
+			toggleCart(productId, btn) {
+				const user = JSON.parse(localStorage.getItem('currentUser'))
+				if (!user) {
+					this.showMiniModal(
+						'Please login first',
+						'Go to Login Page',
+						'fas fa-sign-in-alt',
+						'./authPage.html'
+					)
+					return
+				}
+
+				const product = this.products.find(p => p.id === productId)
+				if (!product) return
+
+				let cart = JSON.parse(localStorage.getItem('cart')) || []
+
+				const existingIndex = cart.findIndex(item => item.id === productId)
+
+				if (existingIndex > -1) {
+					cart.splice(existingIndex, 1)
+
+					btn.innerHTML = '<i class="fas fa-shopping-cart"></i><span>To Cart</span>'
+					btn.classList.remove('in-cart')
+
+				} else {
+					cart.push({
+						id: product.id,
+						title: product.title,
+						price: product.price,
+						image: product.image,
+						count: 1
+					})
+
+					btn.innerHTML = '<i class="fas fa-check"></i><span>In Cart</span>'
+					btn.classList.add('in-cart')
+
+					this.showMiniModal(
+						`Product added to cart`,
+						'Go to Cart',
+						'fas fa-check',
+						'./basket.html'
+					)
+				}
+
+				localStorage.setItem('cart', JSON.stringify(cart))
+				this.updateCartCount()
+
+				if (window.cartManager) {
+					window.cartManager.updateCartCount()
+					window.cartManager.syncIcons()
+				}
+			}
+
+			toggleWishlist(productId) {
+				const user = JSON.parse(localStorage.getItem('currentUser'))
+				if (!user) {
+					this.showMiniModal(
+						'Please login first',
+						'Go to Login Page',
+						'fas fa-sign-in-alt',
+						'./authPage.html'
+					)
+					return
+				}
+
+				const product = this.products.find(p => p.id === productId)
+				if (!product) return
+
+				let wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+				const existingIndex = wishlist.findIndex(item => item.id === productId)
+
+				const heartBtns = document.querySelectorAll(`[data-id="${productId}"] .wishlist-btn, [data-id="${productId}"] .wishlist-btn-bottom`)
+
+				if (existingIndex > -1) {
+					wishlist.splice(existingIndex, 1)
+
+					heartBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						icon.classList.remove('fas')
+						icon.classList.add('far')
+						icon.style.color = ''
+					})
+
+				} else {
+					wishlist.push({
+						id: product.id,
+						title: product.title,
+						price: product.price,
+						image: product.image
+					})
+
+					heartBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						icon.classList.remove('far')
+						icon.classList.add('fas')
+						icon.style.color = '#dc3545'
+					})
+
+					this.showMiniModal(
+						`Product added to Wishlist`,
+						'Wishlist Page',
+						'fas fa-heart',
+						'./wishlist.html'
+					)
+				}
+
+				localStorage.setItem('wishlist', JSON.stringify(wishlist))
+			}
+
+			toggleCompare(productId) {
+				const user = JSON.parse(localStorage.getItem('currentUser'))
+				if (!user) {
+					this.showMiniModal(
+						'Please login first',
+						'Go to Login Page',
+						'fas fa-sign-in-alt',
+						'./authPage.html'
+					)
+					return
+				}
+
+				const product = this.products.find(p => p.id === productId)
+				if (!product) return
+
+				let compare = JSON.parse(localStorage.getItem('comparison')) || []
+				const existingIndex = compare.findIndex(item => item.id === productId)
+
+				const scaleBtns = document.querySelectorAll(`[data-id="${productId}"] .compare-btn, [data-id="${productId}"] .compare-btn-bottom`)
+
+				if (existingIndex > -1) {
+					compare.splice(existingIndex, 1)
+
+					scaleBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						icon.style.color = ''
+					})
+
+				} else {
+					if (compare.length >= 4) {
+						this.showMiniModal(
+							'You can only compare up to 4 products',
+							'Comparison Page',
+							'fas fa-exclamation-triangle',
+							'./comparison.html'
+						)
+						return
+					}
+
+					compare.push({
+						id: product.id,
+						title: product.title,
+						price: product.price,
+						image: product.image
+					})
+
+					scaleBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						icon.style.color = '#0058ab'
+					})
+
+					this.showMiniModal(
+						`"${product.title}" added to comparison`,
+						'Comparison Page',
+						'fas fa-balance-scale',
+						'./comparison.html'
+					)
+				}
+
+				localStorage.setItem('comparison', JSON.stringify(compare))
+			}
+
+			syncIcons() {
+				const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+				const compare = JSON.parse(localStorage.getItem('comparison')) || []
+				const cart = JSON.parse(localStorage.getItem('cart')) || []
+
+				document.querySelectorAll('.product-card').forEach(card => {
+					const productId = parseInt(card.dataset.productId)
+
+					if (!productId) return
+
+					const heartBtns = card.querySelectorAll('.wishlist-btn, .wishlist-btn-bottom')
+					const inWishlist = wishlist.some(item => item.id === productId)
+
+					heartBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						if (inWishlist) {
+							icon.classList.remove('far')
+							icon.classList.add('fas')
+							icon.style.color = '#dc3545'
+						} else {
+							icon.classList.remove('fas')
+							icon.classList.add('far')
+							icon.style.color = ''
+						}
+					})
+
+					const scaleBtns = card.querySelectorAll('.compare-btn, .compare-btn-bottom')
+					const inCompare = compare.some(item => item.id === productId)
+
+					scaleBtns.forEach(btn => {
+						const icon = btn.querySelector('i')
+						icon.style.color = inCompare ? '#0058ab' : ''
+					})
+
+					const cartBtn = card.querySelector('.cart-btn')
+					const inCart = cart.some(item => item.id === productId)
+
+					if (cartBtn) {
+						if (inCart) {
+							cartBtn.innerHTML = '<i class="fas fa-check"></i><span>In Cart</span>'
+							cartBtn.classList.add('in-cart')
+						} else {
+							cartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i><span>To Cart</span>'
+							cartBtn.classList.remove('in-cart')
+						}
+					}
+				})
+			}
+
+			updateProductCount() {
+				const countElement = document.querySelector('.product-count')
+				if (countElement) {
+					countElement.textContent = ` • ${this.filteredProducts.length} products`
+				}
+			}
+
+			updateCartCount() {
+				const cart = JSON.parse(localStorage.getItem('cart')) || []
+				const totalItems = cart.reduce((sum, item) => sum + item.count, 0)
+
+				document.querySelectorAll('.cart-badge, .mobile-nav-badge').forEach(badge => {
+					badge.textContent = totalItems
+				})
+			}
+
+			parsePrice(priceString) {
+				if (!priceString) return null
+				const cleanString = priceString.replace(/[^\d]/g, '')
+				return cleanString ? parseInt(cleanString) : null
+			}
+
+			formatPrice(price) {
+				return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+			}
+
+			showMiniModal(message, buttonText, icon, link) {
+				let miniModal = document.querySelector('.mini-modal')
+
+				if (!miniModal) {
+					miniModal = document.createElement('div')
+					miniModal.className = 'mini-modal'
+					miniModal.style.cssText = `
+										position: fixed;
+										bottom: 100px;
+										left: 50%;
+										transform: translateX(-50%) translateY(100px);
+										background: white;
+										padding: 20px;
+										border-radius: 12px;
+										box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+										z-index: 999999;
+										display: none;
+										flex-direction: column;
+										align-items: center;
+										gap: 15px;
+										min-width: 280px;
+										max-width: 350px;
+										text-align: center;
+										transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+								`
+
+					miniModal.innerHTML = `
+										<p style="margin: 0; font-size: 16px; color: #333; line-height: 1.4;"></p>
+										<button style="
+												background: #0058ab;
+												color: white;
+												border: none;
+												padding: 10px 20px;
+												border-radius: 8px;
+												font-size: 14px;
+												font-weight: 500;
+												cursor: pointer;
+												transition: background 0.3s;
+												display: flex;
+												align-items: center;
+												gap: 8px;
+										">
+												<i class="fas"></i>
+												<a href="" style="color: white; text-decoration: none;"></a>
+										</button>
+								`
+
+					document.body.appendChild(miniModal)
+				}
+
+				const modalText = miniModal.querySelector('p')
+				const modalButton = miniModal.querySelector('button')
+				const modalLink = miniModal.querySelector('a')
+				const modalIcon = miniModal.querySelector('i')
+
+				modalText.textContent = message
+				modalLink.textContent = buttonText
+				modalLink.href = link
+				modalIcon.className = icon
+
+				miniModal.style.display = 'flex'
+
+				setTimeout(() => {
+					miniModal.style.transform = 'translateX(-50%) translateY(0)'
+					miniModal.style.opacity = '1'
+				}, 10)
+
+				setTimeout(() => {
+					miniModal.style.transform = 'translateX(-50%) translateY(100px)'
+					miniModal.style.opacity = '0'
+
+					setTimeout(() => {
+						miniModal.style.display = 'none'
+					}, 300)
+				}, 3000)
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			window.productManager = new ProductManager()
+
+			const pageTitle = document.querySelector('.page-title')
+			if (pageTitle) {
+				const countSpan = document.createElement('span')
+				countSpan.className = 'product-count'
+				countSpan.style.fontSize = '16px'
+				countSpan.style.fontWeight = 'normal'
+				countSpan.style.color = '#666'
+				countSpan.style.marginLeft = '10px'
+				pageTitle.appendChild(countSpan)
+			}
+
+			window.productManager.updateProductCount()
+		})
+
+		function searchProductByName(name) {
+			const products = JSON.parse(localStorage.getItem('products')) || []
+			return products.filter(product =>
+				product.title.toLowerCase().includes(name.toLowerCase())
+			)
+		}
+
+		function resetAllFilters() {
+			if (window.productManager) {
+				window.productManager.filters = {
+					priceMin: null,
+					priceMax: null,
+					memory: [],
+					ram: [],
+					brand: [],
+					cores: []
+				}
+
+				document.querySelectorAll('.checkbox-item input').forEach(checkbox => {
+					checkbox.checked = false
+				})
+
+				document.querySelectorAll('.price-input').forEach(input => {
+					input.value = ''
+				})
+
+				window.productManager.applyFilters()
+			}
+		}
+	</script>
+</body>
+
+</html>

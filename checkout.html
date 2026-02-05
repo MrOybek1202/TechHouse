@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Order Checkout - TechHouse</title>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/checkout.css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header-content">
+				<div>
+					<span class="tech">TECH</span><span class="house">HOUSE</span>
+				</div>
+				<div class="breadcrumb">
+					<a href="./index.html">Home</a>
+					<span>/</span>
+					<a href="./basket.html">Cart</a>
+					<span>/</span>
+					<span>Order Checkout</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="container">
+			<div class="checkout-layout">
+				<div class="checkout-main">
+					<h2>Order Checkout</h2>
+					<!-- Delivery Section -->
+					<div class="section-card">
+						<div class="section-title">
+							<span class="section-number">1</span>
+							Delivery
+						</div>
+						<div class="delivery-options">
+							<label class="delivery-option active">
+								<input type="radio" name="delivery" checked>
+								<div class="delivery-info">
+									<div class="delivery-name">Delivery</div>
+									<div class="delivery-description">Delivery to address</div>
+									<div class="delivery-date">Delivered tomorrow</div>
+								</div>
+								<div class="delivery-price">20,000 UZS</div>
+							</label>
+
+							<label class="delivery-option">
+								<input type="radio" name="delivery">
+								<div class="delivery-info">
+									<div class="delivery-name">Pickup from point</div>
+									<div class="delivery-description">Pick up from nearest store</div>
+									<div class="delivery-date">Can be picked up today</div>
+								</div>
+								<div class="delivery-price">Free</div>
+							</label>
+						</div>
+					</div>
+
+					<!-- Address Section -->
+					<div class="section-card">
+						<div class="section-title">
+							<span class="section-number">2</span>
+							Delivery Address
+						</div>
+						<form class="address-form">
+							<div class="form-row">
+								<div class="form-group">
+									<label>First Name</label>
+									<input type="text" placeholder="Enter your first name" required>
+								</div>
+								<div class="form-group">
+									<label>Last Name</label>
+									<input type="text" placeholder="Enter your last name" required>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group">
+									<label>Phone Number</label>
+									<input type="tel" placeholder="+998 __ ___ __ __" required>
+								</div>
+								<div class="form-group">
+									<label>Additional Phone</label>
+									<input type="tel" placeholder="+998 __ ___ __ __">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>City</label>
+								<select required>
+									<option value="">Select city</option>
+									<option value="tashkent" selected>Tashkent</option>
+									<option value="samarkand">Samarkand</option>
+									<option value="bukhara">Bukhara</option>
+									<option value="andijan">Andijan</option>
+									<option value="namangan">Namangan</option>
+									<option value="fergana">Fergana</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label>Street Address</label>
+								<input type="text" placeholder="Street, house number" required>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group">
+									<label>Apartment / House</label>
+									<input type="text" placeholder="Apartment number">
+								</div>
+								<div class="form-group">
+									<label>Entrance / Porch</label>
+									<input type="text" placeholder="Entrance number">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>Comment (optional)</label>
+								<textarea placeholder="Additional information for courier"></textarea>
+							</div>
+						</form>
+					</div>
+
+					<!-- Payment Section -->
+					<div class="section-card">
+						<div class="section-title">
+							<span class="section-number">3</span>
+							Payment Method
+						</div>
+						<div class="payment-options">
+							<label class="payment-option active">
+								<input type="radio" name="payment" checked>
+								<div class="payment-icon">
+									<i class="fas fa-money-bill-wave"></i>
+								</div>
+								<div class="payment-info">
+									<div class="payment-name">Cash</div>
+									<div class="payment-description">Pay upon receipt</div>
+								</div>
+							</label>
+
+							<label class="payment-option">
+								<input type="radio" name="payment">
+								<div class="payment-icon">
+									<i class="fas fa-credit-card"></i>
+								</div>
+								<div class="payment-info">
+									<div class="payment-name">Bank Card</div>
+									<div class="payment-description">Uzcard, Humo, Visa, Mastercard</div>
+								</div>
+							</label>
+
+							<label class="payment-option">
+								<input type="radio" name="payment">
+								<div class="payment-icon">
+									<i class="fas fa-clock"></i>
+								</div>
+								<div class="payment-info">
+									<div class="payment-name">Installment</div>
+									<div class="payment-description">Divide into 3, 6, 12 months</div>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<aside class="checkout-sidebar">
+					<div class="order-summary">
+						<h3 class="summary-title">Order Details</h3>
+
+						<div class="summary-items">
+							<div class="summary-item">
+								<div class="item-image">
+									<img src="./images/product.png" alt="Product">
+								</div>
+								<div class="item-details">
+									<div class="item-name">Smartphone Apple iPhone 14 128GB</div>
+									<div class="item-quantity">1 piece</div>
+								</div>
+								<div class="item-price">5,299,000 UZS</div>
+							</div>
+
+							<div class="summary-item">
+								<div class="item-image">
+									<img src="./images/product.png" alt="Product">
+								</div>
+								<div class="item-details">
+									<div class="item-name">Samsung Galaxy S23 Ultra 256GB</div>
+									<div class="item-quantity">1 piece</div>
+								</div>
+								<div class="item-price">6,799,000 UZS</div>
+							</div>
+
+							<div class="summary-item">
+								<div class="item-image">
+									<img src="./images/product.png" alt="Product">
+								</div>
+								<div class="item-details">
+									<div class="item-name">Xiaomi 13 Pro 512GB</div>
+									<div class="item-quantity">1 piece</div>
+								</div>
+								<div class="item-price">4,599,000 UZS</div>
+							</div>
+
+							<div class="summary-item">
+								<div class="item-image">
+									<img src="./images/product.png" alt="Product">
+								</div>
+								<div class="item-details">
+									<div class="item-name">Honor Magic 5 Pro 256GB</div>
+									<div class="item-quantity">1 piece</div>
+								</div>
+								<div class="item-price">3,899,000 UZS</div>
+							</div>
+
+							<div class="summary-item">
+								<div class="item-image">
+									<img src="./images/product.png" alt="Product">
+								</div>
+								<div class="item-details">
+									<div class="item-name">OnePlus 11 256GB</div>
+									<div class="item-quantity">1 piece</div>
+								</div>
+								<div class="item-price">3,299,000 UZS</div>
+							</div>
+						</div>
+
+						<div class="promo-code">
+							<div class="promo-input-group">
+								<input type="text" placeholder="Promo code">
+								<button class="promo-button">Apply</button>
+							</div>
+						</div>
+
+						<div class="summary-divider"></div>
+
+						<div class="summary-row">
+							<span class="summary-label">Products (5 pieces):</span>
+							<span class="summary-value">23,895,000 UZS</span>
+						</div>
+
+						<div class="summary-row">
+							<span class="summary-label">Discount:</span>
+							<span class="summary-value discount">-1,200,000 UZS</span>
+						</div>
+
+						<div class="summary-row">
+							<span class="summary-label">Delivery:</span>
+							<span class="summary-value delivery">20,000 UZS</span>
+						</div>
+
+						<div class="summary-row total">
+							<span>Total:</span>
+							<span>22,715,000 UZS</span>
+						</div>
+
+						<button class="checkout-button">Confirm Order</button>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Delivery option selection
+		const deliveryOptions = document.querySelectorAll('.delivery-option')
+		deliveryOptions.forEach(option => {
+			option.addEventListener('click', function () {
+				deliveryOptions.forEach(opt => opt.classList.remove('active'))
+				this.classList.add('active')
+			})
+		})
+
+		// Payment option selection
+		const paymentOptions = document.querySelectorAll('.payment-option')
+		paymentOptions.forEach(option => {
+			option.addEventListener('click', function () {
+				paymentOptions.forEach(opt => opt.classList.remove('active'))
+				this.classList.add('active')
+			})
+		})
+
+		// Checkout button
+		document.querySelector('.checkout-button').addEventListener('click', function () {
+			alert('Your order has been received! We will contact you shortly.')
+		});
+	</script>
+</body>
+
+</html>

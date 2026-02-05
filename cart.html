@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PRODUCT</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700anddisplay=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/cart.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<!-- Top Bar -->
+	<div class="top-bar" id="top-bar">
+		<div class="top-bar-content">
+			<div class="top-bar-left">
+				<div class="location">
+					<i class="bi bi-geo-alt-fill"></i>
+					<span>Tashkent</span>
+				</div>
+				<div class="phone">
+					<i class="bi bi-telephone-fill"></i>
+					<span>+998 (99) 999-99-99</span>
+				</div>
+			</div>
+			<div class="top-bar-right">
+				<a href="#footer">About Us</a>
+				<a href="./index.html#map">Stores</a>
+				<a href="#">Track Order</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Header -->
+	<div class="main-header">
+		<div class="header-content">
+			<a href="./index.html" class="logo">
+				<div class="logo-icon">T</div>
+				<div class="logo-text">
+					<div>
+						<span class="tech">TECH</span><span class="house">HOUSE</span>
+					</div>
+					<div class="logo-subtitle">Home of Technology</div>
+				</div>
+			</a>
+
+			<button class="catalog-btn" onclick="toggleCatalog()">
+				<img src="./images/burger.png" alt="">
+				<span>Catalog</span>
+			</button>
+
+			<div class="search-container">
+				<div class="search-bar">
+					<input type="text" placeholder="Search for products...">
+					<a href="./search.html" class="search-btn"><i class="bi bi-search"></i></a>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<a href="./authPage.html" class="icon-btn" id="userBtn">
+					<i class="icon fa-regular fa-user" id="userIcon"></i>
+					<span id="userText">Login</span>
+				</a>
+
+				<a href="./comparison.html" class="icon-btn">
+					<i class="icon fa-solid fa-scale-balanced"></i>
+					<span>Compare</span>
+				</a>
+
+				<a href="./wishlist.html" class="icon-btn">
+					<i class="icon fa-regular fa-heart"></i>
+					<span>Wishlist</span>
+				</a>
+
+				<a href="./basket.html" class="icon-btn">
+					<i class="icon fa-solid fa-cart-shopping"></i>
+					<span>Cart</span>
+					<span class="cart-badge">3</span>
+				</a>
+			</div>
+		</div>
+
+		<!-- Navigation -->
+		<div class="navigation">
+			<div class="nav-content">
+				<ul class="nav-menu">
+					<li>
+						<a href="#">Appliances</a>
+						<div class="mega-menu appliances">
+							<div class="mega-main-content">
+								<div class="mega-menu-sidebar">
+									<div class="sidebar-item">
+										<i class="fas fa-tshirt"></i>
+										<span>Laundry</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-utensils"></i>
+										<span>Dishwashers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item active">
+										<i class="fas fa-snowflake"></i>
+										<span>Fridges and Freezers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-fire-burner"></i>
+										<span>Cooking</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-blender"></i>
+										<span>Small Appliances</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-couch"></i>
+										<span>Home and Outdoors</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-spa"></i>
+										<span>Health and Beauty</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+								<div class="mega-menu-content">
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+											<a href="#" class="mega-menu-link">Tall</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Total No Frost</a>
+											<a href="#" class="mega-menu-link">Premium</a>
+											<a href="#" class="mega-menu-link">Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridges</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Fridges</a>
+											<a href="#" class="mega-menu-link">Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Larder Fridges</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">American Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">View All American Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">With Dispenser</a>
+											<a href="#" class="mega-menu-link">Multi door</a>
+											<a href="#" class="mega-menu-link">Non Plumbed</a>
+											<a href="#" class="mega-menu-link">American Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Integrated</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Fridges</a>
+											<a href="#" class="mega-menu-link">Freezers</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Freezers</a>
+											<a href="#" class="mega-menu-link">Upright Freezers</a>
+											<a href="#" class="mega-menu-link">Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Chest Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">View All Chest Freezers</a>
+											<a href="#" class="mega-menu-link">Fast Freeze</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Wine Coolers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Freestanding Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Integrated Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Slimline Wine coolers</a>
+											<a href="#" class="mega-menu-link">Black</a>
+											<a href="#" class="mega-menu-link">Stainless Steel</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Deals</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Finance</a>
+											<a href="#" class="mega-menu-link">Trade In</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">TV and Audio</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Televisions</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Smart TV</a>
+										<a href="#" class="mega-menu-link">4K Televisions</a>
+										<a href="#" class="mega-menu-link">OLED TV</a>
+										<a href="#" class="mega-menu-link">QLED TV</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Audio</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Headphones</a>
+										<a href="#" class="mega-menu-link">Speakers</a>
+										<a href="#" class="mega-menu-link">Soundbar</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Computing and Gaming</a>
+						<!-- Mega Menu for Computing and Gaming -->
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Computers</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Laptops</a>
+										<a href="#" class="mega-menu-link">Desktop Computers</a>
+										<a href="#" class="mega-menu-link">Tablets</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Gaming</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">PlayStation</a>
+										<a href="#" class="mega-menu-link">Xbox</a>
+										<a href="#" class="mega-menu-link">Nintendo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Mobile Phones</a></li>
+					<li><a href="#">Smart Tech</a></li>
+					<li><a href="#">Floorcare</a></li>
+					<li><a href="#" class="deals">Deals</a></li>
+					<li><a href="#">Gifts</a></li>
+					<li><a href="#">TechHouse Membership</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Catalog Modal -->
+	<div class="catalog-modal" id="catalogModal">
+		<div class="catalog-modal-header">
+			<div class="catalog-header-left">
+				<a href="./authPage.html">Login</a>
+				<a href="./authPage.html">Register</a>
+			</div>
+			<button class="catalog-close-btn" onclick="toggleCatalog()">
+				<i class="bi bi-x"></i>
+			</button>
+		</div>
+
+		<div class="catalog-modal-body">
+			<div class="catalog-sidebar">
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tshirt"></i>
+					<span>Laundry</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-utensils"></i>
+					<span>Dishwashers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item active">
+					<i class="fas fa-snowflake"></i>
+					<span>Fridges and Freezers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-fire-burner"></i>
+					<span>Cooking</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-blender"></i>
+					<span>Small Appliances</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-couch"></i>
+					<span>Home and Outdoors</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-spa"></i>
+					<span>Health and Beauty</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-mobile"></i>
+					<span>Mobile Phones</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-laptop"></i>
+					<span>Computing</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tv"></i>
+					<span>TV and Audio</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-gamepad"></i>
+					<span>Gaming</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Bottom Navigation -->
+	<div class="mobile-bottom-nav">
+		<div class="mobile-nav-items">
+			<a href="./index.html" class="mobile-nav-item active">
+				<i class="bi bi-house-door-fill"></i>
+				<span>Home</span>
+			</a>
+
+			<button class="mobile-nav-item" style="background-color: transparent; border: none;" onclick="toggleCatalog()">
+				<i class="bi bi-grid-3x3-gap"></i>
+				<span>Catalog</span>
+			</button>
+			<a href="./basket.html" class="mobile-nav-item">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span>Cart</span>
+				<span class="mobile-nav-badge">3</span>
+			</a>
+			<a href="./wishlist.html" class="mobile-nav-item">
+				<i class="fa-regular fa-heart"></i>
+				<span>Wishlist</span>
+			</a>
+			<a href="./index.html" class="mobile-nav-item">
+				<i class="fa-regular fa-user"></i>
+				<span>Login</span>
+			</a>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<main class="main-cart">
+		<section>
+			<!-- Breadcrumb -->
+			<div class="breadcrumb">
+				<a href="./index.html">Home</a>
+				<span>/</span>
+				<a href="./index.html#toplamlar">Dryers</a>
+				<span>/</span>
+				<span>Samsung DV90BB9445GBLP</span>
+			</div>
+			<!-- Product Section -->
+			<div class="product-container">
+				<!-- Column 1: Product Gallery -->
+				<div class="product-images">
+					<!-- Action Icons Row -->
+					<div class="action-icons">
+						<button class="action-icon-btn">
+							<i class="far fa-heart"></i>
+							To Wishlist
+						</button>
+						<button class="action-icon-btn">
+							<i class="fas fa-balance-scale"></i>
+							To Compare
+						</button>
+						<a href="#" class="rating-badge">
+							<span class="rating-stars">⭐</span>
+							<span class="rating-text">5 • 1 review</span>
+						</a>
+					</div>
+					<div class="product-gallery">
+						<div class="thumbnail-list">
+							<div class="thumbnail active">
+								<img src="./images/product.png" alt="View 1">
+							</div>
+							<div class="thumbnail">
+								<i class="bi bi-play-circle-fill"></i>
+								<img src="./images/product.png" alt="View 2">
+							</div>
+							<div class="thumbnail">
+								<img src="./images/product.png" alt="View 3">
+							</div>
+							<div class="thumbnail">
+								<img src="./images/product.png" alt="View 4">
+							</div>
+						</div>
+						<div class="main-image-container">
+							<div class="view-mode-tabs">
+								<a href="#3d-view" class="view-tab">
+									<i class="fas fa-cube"></i> 3D View
+								</a>
+								<button class="ar-badge">
+									<i class="fas fa-check-circle"></i>
+									Available
+								</button>
+							</div>
+
+							<!-- Carousel arrows -->
+							<button class="carousel-arrow prev-arrow" onclick="prevImage()">
+								<i class="fas fa-chevron-left"></i>
+							</button>
+							<button class="carousel-arrow next-arrow" onclick="nextImage()">
+								<i class="fas fa-chevron-right"></i>
+							</button>
+
+							<!-- Current image indicator -->
+							<div class="image-counter">
+								<span class="current-image">1</span> / <span class="total-images">4</span>
+							</div>
+
+							<img width="598" height="320" src="./images/product.png" alt="Samsung Dryer" class="main-image"
+								id="mainProductImage">
+						</div>
+					</div>
+				</div>
+				<!-- Column 2: Options and Specifications -->
+				<div class="product-options">
+					<!-- Color Options -->
+					<div class="product-badges">
+						<span class="top-badge badge-cashback">Cashback 26%</span>
+						<span class="top-badge badge-app">-10% in app</span>
+						<span class="top-badge badge-delivery">Free Delivery</span>
+						<span class="top-badge badge-combo">-7% on Combo</span>
+						<span class="top-badge badge-price">Reduce Price</span>
+					</div>
+					<div class="color">
+						<h1 class="product-title-cart">Honor X8b 8/256GB Midnight Black</h1>
+						<h3 class="option-title">Color</h3>
+						<div class="option-buttons">
+							<button class="option-btn color-option active">
+								<img src="./images/product.png" alt="" class="img-preview">
+							</button>
+							<button class="option-btn color-option">
+								<img src="./images/product.png" alt="" class="img-preview">
+							</button>
+							<button class="option-btn color-option">
+								<img src="./images/product.png" alt="" class="img-preview">
+							</button>
+						</div>
+					</div>
+
+					<!-- Memory Options -->
+					<div class="option-group">
+						<h3 class="option-title">Internal Storage</h3>
+						<div class="option-buttons">
+							<button class="option-btn active">256 GB</button>
+							<button class="option-btn">128 GB</button>
+						</div>
+					</div>
+
+					<!-- About Product Section -->
+					<div class="about-product">
+						<div class="about-product-title">
+							<i class="fas fa-info-circle"></i>
+							Quick Product Info
+						</div>
+						<div class="about-product-grid">
+							<div class="about-item">
+								<div class="about-item-left">
+									<span class="about-label">Brand</span>
+								</div>
+								<div class="about-item-right">
+									<span class="about-value">Honor</span>
+								</div>
+							</div>
+
+							<div class="about-item">
+								<div class="about-item-left">
+									<span class="about-label">Main Camera</span>
+								</div>
+								<div class="about-item-right">
+									<span class="about-value">108 MP, 5 MP, 2 MP</span>
+								</div>
+							</div>
+
+							<div class="about-item">
+								<div class="about-item-left">
+									<span class="about-label">Processor</span>
+								</div>
+								<div class="about-item-right">
+									<span class="about-value">Qualcomm Snapdragon 680</span>
+								</div>
+							</div>
+
+							<div class="about-item">
+								<div class="about-item-left">
+									<span class="about-label">Front Camera</span>
+								</div>
+								<div class="about-item-right">
+									<span class="about-value">50 MP</span>
+								</div>
+							</div>
+
+							<div class="about-item">
+								<div class="about-item-left">
+									<span class="about-label">Number of Cameras</span>
+								</div>
+								<div class="about-item-right">
+									<span class="about-value">3</span>
+								</div>
+							</div>
+						</div>
+
+						<a href="#specsTab" class="all-specs-btn" onclick="openTab('specs')">All Specifications</a>
+					</div>
+				</div>
+				<!-- Column 3: Product Info, Price, Actions -->
+				<div class="product-info-cart">
+					<!-- Price Section -->
+					<div class="price-section">
+						<div class="current-price-cart">3,501,000 UZS</div>
+
+						<div class="installment-section">
+							<div class="installment-label">Installment</div>
+							<div class="installment-price">291,750 UZS</div>
+							<div class="installment-period">/ 18 months</div>
+						</div>
+
+						<p class="installment-note">
+							When placing an order, you can choose installment payment from 12 to 24 months
+						</p>
+					</div>
+
+					<!-- Quantity Selector and Cart Button -->
+					<div class="cart-section">
+						<!-- Quantity counter added -->
+						<div class="quantity-selector">
+							<button class="quantity-btn minus-btn">
+								<i class="bi bi-dash"></i>
+							</button>
+							<input type="number" class="quantity-input" value="1" min="1" max="99">
+							<button class="quantity-btn plus-btn">
+								<i class="bi bi-plus"></i>
+							</button>
+						</div>
+
+						<a href="./basket.html" class="btn-cart-simple">
+							<button class="btn-cart-simple">
+								<i class="bi bi-cart"></i>
+								Add to Cart
+							</button>
+						</a>
+					</div>
+
+					<a href="./checkout.html">
+						<div class="one-click-buy">
+							<i class="bi bi-lightning"></i>
+							One-Click Purchase
+						</div>
+					</a>
+
+					<!-- Installment Partners -->
+					<div class="installment-partners">
+						<p class="partners-note">
+							When applying for installment payment, get the best offers from us and our partners
+						</p>
+
+						<div class="partners-carusel">
+							<div class="partner-item">
+								<div class="partner-icon">A</div>
+								<div class="partner-name">Axiom Installment</div>
+							</div>
+							<div class="partner-item">
+								<div class="partner-icon">T</div>
+								<div class="partner-name">Tehnoboon</div>
+							</div>
+							<div class="partner-item">
+								<div class="partner-icon">T</div>
+								<div class="partner-name">TBC Installment</div>
+							</div>
+							<div class="partner-item">
+								<div class="partner-icon">A</div>
+								<div class="partner-name">Alif</div>
+							</div>
+							<div class="partner-item">
+								<div class="partner-icon">A</div>
+								<div class="partner-name">Anorbank</div>
+							</div>
+							<div class="partner-item">
+								<div class="partner-icon">O</div>
+								<div class="partner-name">Osonk</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Pickup Section -->
+					<div class="pickup-section">
+						<div class="pickup-header">
+							<i class="bi bi-shop pickup-icon"></i>
+							<div class="pickup-info">
+								<div class="pickup-title">Free Pickup from Store</div>
+								<div class="pickup-stores">Available in 4 stores</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Warranty -->
+					<div class="warranty-section">
+						<div class="warranty-icon">📋</div>
+						<div class="warranty-text">1 Year Warranty</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tabs Section -->
+			<div class="tabs-container">
+				<!-- Specifications Content -->
+				<div id="specs-content" class="tab-content">
+					<h2>Product Specifications</h2>
+
+					<div class="specs-grid">
+						<div class="spec-item">
+							<span class="spec-label">Brand</span>
+							<span class="spec-value">Samsung</span>
+						</div>
+						<div class="spec-item">
+							<span class="spec-label">Type</span>
+							<span class="spec-value">Dryer</span>
+						</div>
+						<div class="spec-item">
+							<span class="spec-label">Weight (kg)</span>
+							<span class="spec-value">52</span>
+						</div>
+						<div class="spec-item">
+							<span class="spec-label">Maximum Load</span>
+							<span class="spec-value">9 kg</span>
+						</div>
+						<div class="spec-item">
+							<span class="spec-label">Noise Level</span>
+							<span class="spec-value">62 dB</span>
+						</div>
+						<div class="spec-item">
+							<span class="spec-label">Energy Efficiency Class</span>
+							<span class="spec-value">A+++</span>
+						</div>
+					</div>
+
+					<div id="specs-full-details" style="display: none;">
+						<div class="specs-category">
+							<h3 class="specs-category-title">Display</h3>
+							<div class="spec-row">
+								<span class="spec-label">Display</span>
+								<span class="spec-value">Available</span>
+							</div>
+						</div>
+
+						<div class="specs-category">
+							<h3 class="specs-category-title">Other Features</h3>
+							<div class="spec-row">
+								<span class="spec-label">Control</span>
+								<span class="spec-value">Touch</span>
+							</div>
+							<div class="spec-row">
+								<span class="spec-label">Filters</span>
+								<span class="spec-value">Available</span>
+							</div>
+							<div class="spec-row">
+								<span class="spec-label">Inverter Motor</span>
+								<span class="spec-value">Available</span>
+							</div>
+						</div>
+
+						<div class="specs-category">
+							<h3 class="specs-category-title">Power</h3>
+							<div class="spec-row">
+								<span class="spec-label">Power Consumption</span>
+								<span class="spec-value">1200 W</span>
+							</div>
+						</div>
+
+						<div class="specs-category">
+							<h3 class="specs-category-title">Functions</h3>
+							<div class="spec-row">
+								<span class="spec-label">Number of Programs</span>
+								<span class="spec-value">19</span>
+							</div>
+						</div>
+
+						<div class="specs-category">
+							<h3 class="specs-category-title">Package Dimensions</h3>
+							<div class="spec-row">
+								<span class="spec-label">Package Weight</span>
+								<span class="spec-value">52 kg</span>
+							</div>
+							<div class="spec-row">
+								<span class="spec-label">Package Length</span>
+								<span class="spec-value">60 cm</span>
+							</div>
+							<div class="spec-row">
+								<span class="spec-label">Package Width</span>
+								<span class="spec-value">60 cm</span>
+							</div>
+							<div class="spec-row">
+								<span class="spec-label">Package Height</span>
+								<span class="spec-value">85 cm</span>
+							</div>
+						</div>
+					</div>
+
+					<button class="toggle-specs-btn tab-btn" onclick="toggleSpecs()">
+						<span class="toggle-text">View Full</span>
+						<i class="fas fa-chevron-down"></i>
+					</button>
+				</div>
+				<!-- Description Tab -->
+				<div id="description-tab-content" class="tab-content">
+					<h2>Description</h2>
+
+					<div class="description-content" id="description-full">
+						<div class="description-intro">
+							<h3>Honor X8b 8/256GB - Innovation, Style, and Performance</h3>
+						</div>
+
+						<div class="description-section">
+							<h4>Elegance and Comfort</h4>
+							<p>This smartphone impresses with its modern performance and ultra-thin body measuring just 6.78 mm in
+								thickness. Lightweight components ensure ease of use, while the ergonomic design fits perfectly in hand.
+								The 6.7-inch AMOLED display matrix provides saturated colors, high contrast, and smooth animation thanks
+								to the 90 Hz refresh rate. The 20.1:9 aspect ratio creates ideal conditions for video watching, text
+								work, and interface interaction.</p>
+						</div>
+
+						<div class="description-section">
+							<h4>High Power and Speed</h4>
+							<p>The eight-core Qualcomm Snapdragon 680 processor with 2.4 GHz frequency is responsible for the device's
+								efficient performance. The Adreno 610 graphics accelerator ensures processing of modern games and
+								high-definition videos. Thanks to 8 GB of fast memory, launching and switching between apps happens
+								instantly, while 256 GB of storage allows storing large files without constantly deleting data.</p>
+						</div>
+
+						<div id="description-extra" style="display: none;">
+							<div class="description-section">
+								<h4>Professional-Level Photos</h4>
+								<p>The main camera consists of three modules: a 108-megapixel sensor for clear and detailed shots, a
+									5-megapixel ultra-wide-angle lens for panoramic scenes, and a 2-megapixel macro lens for close-up
+									photography. The 50 MP front camera creates quality selfies, providing natural color reproduction and
+									accurate focusing. Built-in image processing algorithms automatically enhance images, making them more
+									expressive.</p>
+							</div>
+
+							<div class="description-section">
+								<h4>Long Battery Life and Instant Charging</h4>
+								<p>The 4500 mAh battery allows all-day active use of the gadget. Support for fast charging technology
+									reduces energy replenishment time, which is especially important in a busy life rhythm. Energy-saving
+									functions help extend the device's runtime by optimizing resource usage.</p>
+							</div>
+
+							<div class="description-section">
+								<h4>Modern Technologies and Security</h4>
+								<p>The device supports NFC, Bluetooth, and Wi-Fi networks, allowing easy synchronization with other
+									devices and contactless payments. Built-in GPS, GLONASS, Beidou, and Galileo navigation modules
+									provide high accuracy in determining coordinates. The side-mounted fingerprint scanner instantly
+									unlocks the screen to ensure personal data security. The Android 13 operating system offers a
+									convenient interface and a wide range of features for comfortable daily task completion.</p>
+							</div>
+						</div>
+					</div>
+
+					<button class="toggle-description-btn tab-btn" onclick="toggleDescription()">
+						<span class="toggle-text">View Full</span>
+						<i class="fas fa-chevron-down"></i>
+					</button>
+				</div>
+			</div>
+			<div class="reviews-container">
+				<!-- Left Side - Reviews List -->
+				<div class="reviews-list">
+					<h2 class="reviews-header">Customer Reviews</h2>
+
+					<!-- Review 1 -->
+					<div class="review-card">
+						<div class="review-top">
+							<div class="reviewer-info">
+								<div class="reviewer-name">Nabijon Khudoyberganov</div>
+								<div class="review-date">13.06.2024</div>
+							</div>
+							<div class="review-stars">★★★★★</div>
+						</div>
+						<div class="review-content">
+							<div class="review-text">Review is very convenient and affordable</div>
+						</div>
+						<div class="review-actions">
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-up"></i>
+								<span>0</span>
+							</button>
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-down"></i>
+								<span>0</span>
+							</button>
+						</div>
+					</div>
+
+					<!-- Review 2 -->
+					<div class="review-card">
+						<div class="review-top">
+							<div class="reviewer-info">
+								<div class="reviewer-name">Nabijon Khudoyberganov</div>
+								<div class="review-date">09.05.2024</div>
+							</div>
+							<div class="review-stars">★★★★★</div>
+						</div>
+						<div class="review-content">
+							<div class="review-text">Review Excellent prices</div>
+						</div>
+						<div class="review-actions">
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-up"></i>
+								<span>0</span>
+							</button>
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-down"></i>
+								<span>0</span>
+							</button>
+						</div>
+					</div>
+
+					<!-- Review 3 -->
+					<div class="review-card">
+						<div class="review-top">
+							<div class="reviewer-info">
+								<div class="reviewer-name">Javohir</div>
+								<div class="review-date">28.03.2024</div>
+							</div>
+							<div class="review-stars">★★★★★</div>
+						</div>
+						<div class="review-content">
+							<div class="review-meta">Advantages: Excellent</div>
+							<div class="review-meta">Disadvantages: Excellent</div>
+							<div class="review-text">Review Very convenient and well made</div>
+						</div>
+						<div class="review-actions">
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-up"></i>
+								<span>0</span>
+							</button>
+							<button class="review-action-btn">
+								<i class="far fa-thumbs-down"></i>
+								<span>0</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Side - Rating Summary and Form -->
+				<div class="reviews-sidebar">
+					<!-- Rating Summary -->
+					<div class="rating-summary">
+						<div class="rating-header">
+							<div class="rating-score">
+								<span class="rating-star-icon">★</span>
+								<span class="rating-number">5.0</span>
+							</div>
+							<div class="rating-count">/ 5<br>4 ratings</div>
+						</div>
+
+						<div class="rating-bars">
+							<div class="rating-bar-row">
+								<div class="bar-stars">★★★★★</div>
+								<div class="bar-container">
+									<div class="bar-fill" style="width: 100%;"></div>
+								</div>
+								<div class="bar-count">4</div>
+							</div>
+							<div class="rating-bar-row">
+								<div class="bar-stars">★★★★☆</div>
+								<div class="bar-container">
+									<div class="bar-fill" style="width: 0%;"></div>
+								</div>
+								<div class="bar-count">0</div>
+							</div>
+							<div class="rating-bar-row">
+								<div class="bar-stars">★★★☆☆</div>
+								<div class="bar-container">
+									<div class="bar-fill" style="width: 0%;"></div>
+								</div>
+								<div class="bar-count">0</div>
+							</div>
+							<div class="rating-bar-row">
+								<div class="bar-stars">★★☆☆☆</div>
+								<div class="bar-container">
+									<div class="bar-fill" style="width: 0%;"></div>
+								</div>
+								<div class="bar-count">0</div>
+							</div>
+							<div class="rating-bar-row">
+								<div class="bar-stars">★☆☆☆☆</div>
+								<div class="bar-container">
+									<div class="bar-fill" style="width: 0%;"></div>
+								</div>
+								<div class="bar-count">0</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Review Form -->
+					<div class="review-form">
+						<h3 class="form-title">Leave a Review</h3>
+
+						<div class="form-group">
+							<label class="form-label">Rate</label>
+							<div class="star-rating" id="starRating">
+								<button class="star-btn" data-rating="1">☆</button>
+								<button class="star-btn" data-rating="2">☆</button>
+								<button class="star-btn" data-rating="3">☆</button>
+								<button class="star-btn" data-rating="4">☆</button>
+								<button class="star-btn" data-rating="5">☆</button>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">Advantages</label>
+							<input type="text" class="form-input" placeholder="Write the product advantages">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">Disadvantages</label>
+							<input type="text" class="form-input" placeholder="Write the product disadvantages">
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">Review</label>
+							<textarea class="form-textarea" placeholder="Your opinion..."></textarea>
+						</div>
+
+						<button class="submit-btn">Submit Review</button>
+					</div>
+				</div>
+			</div>
+			<div class="products-section">
+				<div class="section-header">
+					<h2 class="section-title">Recently Viewed Products</h2>
+					<a href="#" class="view-all-link">
+						View All ›
+					</a>
+				</div>
+				<div class="products-scroll">
+					<!-- Product 1 -->
+					<div class="product-card">
+						<a href="./cart.html">
+							<div class="product-image-wrapper">
+								<div class="product-badges">
+									<span class="badge badge-credit">50:0:2</span>
+								</div>
+								<div class="product-actions">
+									<button class="action-btn">
+										<i class="far fa-heart"></i>
+									</button>
+									<button class="action-btn">
+										<i class="fas fa-balance-scale"></i>
+									</button>
+								</div>
+								<img src="./images/product.png" alt="Samsung" class="product-image">
+							</div>
+							<div class="product-info-mini">
+								<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+								<div class="product-rating">
+									<span class="stars">⭐ 4.6</span>
+									<span class="rating-text">(124 reviews)</span>
+								</div>
+								<div class="product-installment">From 441,583 UZS / month</div>
+								<div class="product-stock">In Stock</div>
+								<div class="product-footer">
+									<div class="product-prices">
+										<span class="current-price">5,299,000 UZS</span>
+										<div class="price-row">
+											<span class="old-price">6,299,000 UZS</span>
+											<span class="discount-badge">-18%</span>
+										</div>
+									</div>
+									<button class="cart-btn">
+										<i class="fas fa-shopping-cart"></i>
+									</button>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- Product 2 -->
+					<div class="product-card">
+						<div class="product-image-wrapper">
+							<div class="product-badges">
+								<span class="badge badge-credit">Cashback 20%</span>
+								<span class="badge view-all-badges"> <i class="bi bi-caret-right-fill"></i> </span>
+							</div>
+							<div class="product-actions">
+								<button class="action-btn">
+									<i class="icon fa-regular fa-heart"></i>
+								</button>
+								<button class="action-btn">
+									<i class="fas fa-balance-scale"></i>
+								</button>
+							</div>
+							<img src="./images/product.png" alt="Samsung" class="product-image">
+						</div>
+						<div class="product-info-mini">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">From 441,583 UZS / month</div>
+							<div class="product-stock">In Stock</div>
+							<div class="product-footer">
+								<div class="product-prices">
+									<span class="current-price">5,299,000 UZS</span>
+									<div class="price-row">
+										<span class="old-price">6,299,000 UZS</span>
+										<span class="discount-badge">-18%</span>
+									</div>
+								</div>
+								<button class="cart-btn">
+									<i class="fas fa-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product-card">
+						<div class="product-image-wrapper">
+							<div class="product-badges">
+								<span class="badge badge-credit">50:0:2</span>
+							</div>
+							<div class="product-actions">
+								<button class="action-btn">
+									<i class="far fa-heart"></i>
+								</button>
+								<button class="action-btn">
+									<i class="fas fa-balance-scale"></i>
+								</button>
+							</div>
+							<img src="./images/product.png" alt="Samsung" class="product-image">
+						</div>
+						<div class="product-info-mini">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">From 441,583 UZS / month</div>
+							<div class="product-stock">In Stock</div>
+							<div class="product-footer">
+								<div class="product-prices">
+									<span class="current-price">5,299,000 UZS</span>
+									<div class="price-row">
+										<span class="old-price">6,299,000 UZS</span>
+										<span class="discount-badge">-18%</span>
+									</div>
+								</div>
+								<button class="cart-btn">
+									<i class="fas fa-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product-card">
+						<div class="product-image-wrapper">
+							<div class="product-badges">
+								<span class="badge badge-credit">50:0:2</span>
+							</div>
+							<div class="product-actions">
+								<button class="action-btn">
+									<i class="far fa-heart"></i>
+								</button>
+								<button class="action-btn">
+									<i class="fas fa-balance-scale"></i>
+								</button>
+							</div>
+							<img src="./images/product.png" alt="Samsung" class="product-image">
+						</div>
+						<div class="product-info-mini">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">From 441,583 UZS / month</div>
+							<div class="product-stock">In Stock</div>
+							<div class="product-footer">
+								<div class="product-prices">
+									<span class="current-price">5,299,000 UZS</span>
+									<div class="price-row">
+										<span class="old-price">6,299,000 UZS</span>
+										<span class="discount-badge">-18%</span>
+									</div>
+								</div>
+								<button class="cart-btn">
+									<i class="fas fa-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="product-card">
+						<div class="product-image-wrapper">
+							<div class="product-badges">
+								<span class="badge badge-credit">50:0:2</span>
+							</div>
+							<div class="product-actions">
+								<button class="action-btn">
+									<i class="far fa-heart"></i>
+								</button>
+								<button class="action-btn">
+									<i class="fas fa-balance-scale"></i>
+								</button>
+							</div>
+							<img src="./images/product.png" alt="Samsung" class="product-image">
+						</div>
+						<div class="product-info-mini">
+							<h3 class="product-title">Samsung Washing Machine WW90T554DAX/S1</h3>
+							<div class="product-rating">
+								<span class="stars">⭐ 4.6</span>
+								<span class="rating-text">(124 reviews)</span>
+							</div>
+							<div class="product-installment">From 441,583 UZS / month</div>
+							<div class="product-stock">In Stock</div>
+							<div class="product-footer">
+								<div class="product-prices">
+									<span class="current-price">5,299,000 UZS</span>
+									<div class="price-row">
+										<span class="old-price">6,299,000 UZS</span>
+										<span class="discount-badge">-18%</span>
+									</div>
+								</div>
+								<button class="cart-btn">
+									<i class="fas fa-shopping-cart"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="mobile-btn">
+			<button class="add-to-cart">
+				Add to Cart
+			</button>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Contact Info -->
+				<div class="footer-column footer-contact-column">
+					<p class="footer-question">Any questions? Call us</p>
+					<a href="tel:+998712099944" class="footer-phone">+998 99 999 99 99</a>
+					<div class="footer-social">
+						<a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+						<a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+
+				<!-- Company -->
+				<div class="footer-column">
+					<h3 class="footer-title">Company</h3>
+					<ul class="footer-links">
+						<li><a href="#">For Legal Entities</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">News & Blogs</a></li>
+						<li><a href="#">IMEI Check</a></li>
+						<li><a href="#">Work at TechHouse</a></li>
+					</ul>
+				</div>
+
+				<!-- Information -->
+				<div class="footer-column">
+					<h3 class="footer-title">Information</h3>
+					<ul class="footer-links">
+						<li><a href="#">Free Delivery</a></li>
+						<li><a href="#">Service Centers</a></li>
+						<li><a href="#">Personal Account</a></li>
+						<li><a href="#">Contact Numbers</a></li>
+						<li><a href="#">Public Offer Agreement</a></li>
+					</ul>
+				</div>
+
+				<!-- Support -->
+				<div class="footer-column">
+					<h3 class="footer-title">Customer Support</h3>
+					<ul class="footer-links">
+						<li><a href="#">Product Return</a></li>
+						<li><a href="#">Product Warranty</a></li>
+						<li><a href="#">Store Locations</a></li>
+					</ul>
+				</div>
+
+				<!-- App Download -->
+				<div class="footer-column footer-app-column">
+					<h3 class="footer-title">Download the App</h3>
+					<div class="qr-content">
+						<div class="footer-qr">
+							<i class="fas fa-qrcode"></i>
+						</div>
+						<div class="qr-content-col">
+							<div class="footer-app-buttons">
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-google-play"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-apple"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fas fa-store"></i>
+								</a>
+							</div>
+							<p class="footer-qr-text">Scan QR Code<br>to Download</p>
+							<img class="footer-arrow" width="50" height="30" src="./images/point-arrow.png" alt="point-arrow">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p class="footer-copyright">
+					2016-2025 © techouse.uz. All rights reserved. The displayed product prices and purchase conditions are valid
+					as of the current date.
+				</p>
+				<div class="footer-payments">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa" class="payment-logo">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+						class="payment-logo">
+					<div class="payment-logo-box">Payme</div>
+					<div class="payment-logo-box">Click</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#top-bar">
+		<button class="scroll-top-btn">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+	</a>
+
+	<a href="#">
+		<button class="message-btn" id="messageBtn">
+			<i class="fas fa-comment-dots"></i>
+		</button>
+	</a>
+	<div class="page-overlay"></div>
+	<script>
+		const menuItems = document.querySelectorAll('.nav-menu')
+
+		const overlay = document.querySelector('.page-overlay')
+
+		menuItems.forEach(item => {
+			item.addEventListener('mouseenter', () => overlay.classList.add('active'))
+			item.addEventListener('mouseleave', () => overlay.classList.remove('active'))
+		})
+
+		function toggleSpecs() {
+			const toggleBtn = event.target.closest('.toggle-specs-btn')
+			const specsFullDiv = toggleBtn.previousElementSibling
+			const toggleText = toggleBtn.querySelector('.toggle-text')
+			const toggleIcon = toggleBtn.querySelector('i')
+
+			if (specsFullDiv.style.display === 'none') {
+				specsFullDiv.style.display = 'block'
+				toggleText.textContent = 'Hide'
+				toggleBtn.classList.add('active')
+
+			} else {
+				specsFullDiv.style.display = 'none'
+				toggleText.textContent = 'View Full'
+				toggleBtn.classList.remove('active')
+
+			}
+		}
+
+		function toggleDescription() {
+			const toggleBtn = event.target.closest('.toggle-description-btn')
+			const descriptionExtraDiv = document.getElementById('description-extra')
+			const toggleText = toggleBtn.querySelector('.toggle-text')
+			const toggleIcon = toggleBtn.querySelector('i')
+
+			if (descriptionExtraDiv.style.display === 'none') {
+				descriptionExtraDiv.style.display = 'block'
+				toggleText.textContent = 'Hide'
+				toggleBtn.classList.add('active')
+
+			} else {
+				descriptionExtraDiv.style.display = 'none'
+				toggleText.textContent = 'View Full'
+				toggleBtn.classList.remove('active')
+			}
+		}
+		// Star rating functionality
+		const starButtons = document.querySelectorAll('.star-btn')
+		let selectedRating = 0
+
+		starButtons.forEach(button => {
+			button.addEventListener('click', function () {
+				selectedRating = parseInt(this.dataset.rating)
+				updateStars()
+			})
+
+			button.addEventListener('mouseenter', function () {
+				const hoverRating = parseInt(this.dataset.rating)
+				highlightStars(hoverRating)
+			})
+		})
+
+		document.getElementById('starRating').addEventListener('mouseleave', function () {
+			updateStars()
+		})
+
+		function updateStars() {
+			starButtons.forEach((btn, index) => {
+				if (index < selectedRating) {
+					btn.classList.add('active')
+					btn.textContent = '★'
+				} else {
+					btn.classList.remove('active')
+					btn.textContent = '☆'
+				}
+			})
+		}
+
+		function highlightStars(rating) {
+			starButtons.forEach((btn, index) => {
+				if (index < rating) {
+					btn.textContent = '★'
+				} else {
+					btn.textContent = '☆'
+				}
+			})
+		}
+
+		// Like/Dislike functionality
+		document.querySelectorAll('.action-btn').forEach(btn => {
+			btn.addEventListener('click', function () {
+				const countSpan = this.querySelector('span')
+				let count = parseInt(countSpan.textContent)
+				countSpan.textContent = count + 1
+			})
+		})
+		//  Open Modal 
+		function toggleCatalog() {
+			const modal = document.getElementById('catalogModal')
+			const isActive = modal.classList.contains('active')
+
+			if (isActive) {
+				modal.classList.remove('active')
+				document.body.style.overflow = ''
+			} else {
+				modal.classList.add('active')
+				document.body.style.overflow = 'hidden'
+			}
+		}
+
+		// Prevent scroll on body when modal is open
+		window.addEventListener('resize', function () {
+			const modal = document.getElementById('catalogModal')
+			if (window.innerWidth > 768 && modal.classList.contains('active')) {
+				toggleCatalog()
+			}
+		});
+	</script>
+</body>
+
+</html>

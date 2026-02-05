@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Comparison</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="./css/comparison.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<!-- Top Bar -->
+	<div class="top-bar" id="top-bar">
+		<div class="top-bar-content">
+			<div class="top-bar-left">
+				<div class="location">
+					<i class="bi bi-geo-alt-fill"></i>
+					<span>Tashkent</span>
+				</div>
+				<div class="phone">
+					<i class="bi bi-telephone-fill"></i>
+					<span>+998 (99) 999-99-99</span>
+				</div>
+			</div>
+			<div class="top-bar-right">
+				<a href="#footer">About Us</a>
+				<a href="./index.html#map">Stores</a>
+				<a href="#">Track Order</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Header -->
+	<div class="main-header">
+		<div class="header-content">
+			<a href="./index.html" class="logo">
+				<div class="logo-icon">T</div>
+				<div class="logo-text">
+					<div>
+						<span class="tech">TECH</span><span class="house">HOUSE</span>
+					</div>
+					<div class="logo-subtitle">House of Technology</div>
+				</div>
+			</a>
+
+			<button class="catalog-btn" onclick="toggleCatalog()">
+				<img src="./images/burger.png" alt="">
+				<span>Catalog</span>
+			</button>
+
+			<div class="search-container">
+				<div class="search-bar">
+					<input type="text" placeholder="Search products...">
+					<a href="./search.html" class="search-btn"><i class="bi bi-search"></i></a>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<a href="./authPage.html" class="icon-btn" id="userBtn">
+					<i class="icon fa-regular fa-user" id="userIcon"></i>
+					<span id="userText">Login</span>
+				</a>
+
+				<a href="./comparison.html" class="icon-btn">
+					<i class="icon fa-solid fa-scale-balanced"></i>
+					<span>Compare</span>
+				</a>
+
+				<a href="./wishlist.html" class="icon-btn">
+					<i class="icon fa-regular fa-heart"></i>
+					<span>Wishlist</span>
+				</a>
+
+				<a href="./basket.html" class="icon-btn">
+					<i class="icon fa-solid fa-cart-shopping"></i>
+					<span>Cart</span>
+					<span class="cart-badge">3</span>
+				</a>
+			</div>
+
+		</div>
+
+		<!-- Navigation -->
+		<div class="navigation">
+			<div class="nav-content">
+				<ul class="nav-menu">
+					<li>
+						<a href="#">Appliances</a>
+						<div class="mega-menu appliances">
+							<div class="mega-main-content">
+								<div class="mega-menu-sidebar">
+									<div class="sidebar-item">
+										<i class="fas fa-tshirt"></i>
+										<span>Laundry</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-utensils"></i>
+										<span>Dishwashers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item active">
+										<i class="fas fa-snowflake"></i>
+										<span>Fridges and Freezers</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-fire-burner"></i>
+										<span>Cooking</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-blender"></i>
+										<span>Small Appliances</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-couch"></i>
+										<span>Home and Outdoors</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+									<div class="sidebar-item">
+										<i class="fas fa-spa"></i>
+										<span>Health and Beauty</span>
+										<i class="fas fa-chevron-right"></i>
+									</div>
+								</div>
+								<div class="mega-menu-content">
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+											<a href="#" class="mega-menu-link">Tall</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Total No Frost</a>
+											<a href="#" class="mega-menu-link">Premium</a>
+											<a href="#" class="mega-menu-link">Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Fridges</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Fridges</a>
+											<a href="#" class="mega-menu-link">Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Fridges</a>
+											<a href="#" class="mega-menu-link">Larder Fridges</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">American Fridge Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">View All American Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">With Dispenser</a>
+											<a href="#" class="mega-menu-link">Multi door</a>
+											<a href="#" class="mega-menu-link">Non Plumbed</a>
+											<a href="#" class="mega-menu-link">American Fridge Freezer Buying Guide</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Integrated</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Fridge Freezers</a>
+											<a href="#" class="mega-menu-link">Fridges</a>
+											<a href="#" class="mega-menu-link">Freezers</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">AO Favourites</a>
+											<a href="#" class="mega-menu-link">Freestanding Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Freezers</a>
+											<a href="#" class="mega-menu-link">Upright Freezers</a>
+											<a href="#" class="mega-menu-link">Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Integrated Under Counter Freezers</a>
+											<a href="#" class="mega-menu-link">Small</a>
+											<a href="#" class="mega-menu-link">Frost Free</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Chest Freezers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">View All Chest Freezers</a>
+											<a href="#" class="mega-menu-link">Fast Freeze</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Wine Coolers</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Freestanding Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Integrated Wine Coolers</a>
+											<a href="#" class="mega-menu-link">Slimline Wine coolers</a>
+											<a href="#" class="mega-menu-link">Black</a>
+											<a href="#" class="mega-menu-link">Stainless Steel</a>
+										</div>
+									</div>
+									<div class="mega-menu-column">
+										<h3 class="mega-menu-title">Deals</h3>
+										<div class="mega-menu-links">
+											<a href="#" class="mega-menu-link">Finance</a>
+											<a href="#" class="mega-menu-link">Trade In</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">TV and Audio</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Televisions</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Smart TV</a>
+										<a href="#" class="mega-menu-link">4K TVs</a>
+										<a href="#" class="mega-menu-link">OLED TV</a>
+										<a href="#" class="mega-menu-link">QLED TV</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Audio</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Headphones</a>
+										<a href="#" class="mega-menu-link">Speakers</a>
+										<a href="#" class="mega-menu-link">Soundbar</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Computing and Gaming</a>
+						<div class="mega-menu">
+							<div class="mega-menu-content">
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Computers</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">Laptops</a>
+										<a href="#" class="mega-menu-link">Desktop PCs</a>
+										<a href="#" class="mega-menu-link">Tablets</a>
+									</div>
+								</div>
+								<div class="mega-menu-column">
+									<h3 class="mega-menu-title">Gaming</h3>
+									<div class="mega-menu-links">
+										<a href="#" class="mega-menu-link">PlayStation</a>
+										<a href="#" class="mega-menu-link">Xbox</a>
+										<a href="#" class="mega-menu-link">Nintendo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">Mobile Phones</a></li>
+					<li><a href="#">Smart Tech</a></li>
+					<li><a href="#">Floorcare</a></li>
+					<li><a href="#" class="deals">Deals</a></li>
+					<li><a href="#">Gifts</a></li>
+					<li><a href="#">TechHouse Membership</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!-- Catalog Modal -->
+	<div class="catalog-modal" id="catalogModal">
+		<div class="catalog-modal-header">
+			<div class="catalog-header-left">
+				<a href="./authPage.html">Login</a>
+				<a href="./authPage.html">Register</a>
+			</div>
+			<button class="catalog-close-btn" onclick="toggleCatalog()">
+				<i class="bi bi-x"></i>
+			</button>
+		</div>
+		<!-- Catalog Modal Body -->
+		<div class="catalog-modal-body">
+			<div class="catalog-sidebar">
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tshirt"></i>
+					<span>Laundry</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-utensils"></i>
+					<span>Dishwashers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item active">
+					<i class="fas fa-snowflake"></i>
+					<span>Fridges and Freezers</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-fire-burner"></i>
+					<span>Cooking</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-blender"></i>
+					<span>Small Appliances</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-couch"></i>
+					<span>Home and Outdoors</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-spa"></i>
+					<span>Health and Beauty</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-mobile"></i>
+					<span>Mobile Phones</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-laptop"></i>
+					<span>Computing</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-tv"></i>
+					<span>TV and Audio</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<a href="#" class="sidebar-item">
+					<i class="fas fa-gamepad"></i>
+					<span>Gaming</span>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Bottom Navigation -->
+	<div class="mobile-bottom-nav">
+		<div class="mobile-nav-items">
+			<a href="./index.html" class="mobile-nav-item active">
+				<i class="bi bi-house-door-fill"></i>
+				<span>Home</span>
+			</a>
+
+			<button class="mobile-nav-item" style="background-color: transparent; border: none;" onclick="toggleCatalog()">
+				<i class="bi bi-grid-3x3-gap"></i>
+				<span>Catalog</span>
+			</button>
+			<a href="./basket.html" class="mobile-nav-item">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span>Cart</span>
+				<span class="mobile-nav-badge">3</span>
+			</a>
+			<a href="./wishlist.html" class="mobile-nav-item">
+				<i class="fa-regular fa-heart"></i>
+				<span>Wishlist</span>
+			</a>
+			<a href="./authPage.html" class="mobile-nav-item">
+				<i class="fa-regular fa-user"></i>
+				<span>Login</span>
+			</a>
+		</div>
+	</div>
+
+	<main class="main">
+		<div class="fixed-product-info" id="fixedProductInfo">
+			<div class="fixed-info-container"></div>
+		</div>
+
+		<section>
+			<div class="breadcrumb">
+				<a href="./index.html">Home</a>
+				<span>/</span>
+				<span>Product Comparison</span>
+			</div>
+
+			<div class="page-header">
+				<h1 class="page-title">Product Specifications</h1>
+			</div>
+
+			<div class="products-scroll-comp">
+				<!-- Product 1 -->
+				<div class="product-card-comp">
+					<div class="product-image-wrapper-comp">
+						<div class="product-badges">
+							<span class="badge badge-credit">50:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale action-active "></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Samsung" class="product-image">
+					</div>
+					<div class="product-info-mini-comp">
+						<a href="#">
+							<h3 class="product-title-comp">Samsung Washing Machine WW90T554DAX/S1</h3>
+						</a>
+						<div class="product-rating-comp">
+							<span class="stars">⭐ 4.6</span>
+							<span class="rating-text">(124 reviews)</span>
+						</div>
+						<div class="product-installment-comp"> 441,583 UZS / month</div>
+						<div class="product-stock-comp">Available</div>
+						<div class="product-footer">
+							<div class="product-prices-comp">
+								<span class="current-price-comp">5,299,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price-comp">6,299,000 UZS</span>
+									<span class="discount-badge-comp">-18%</span>
+								</div>
+							</div>
+							<button class="cart-btn-comp">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 2 -->
+				<div class="product-card-comp">
+					<div class="product-image-wrapper-comp">
+						<div class="product-badges">
+							<span class="badge badge-credit">40:0:3</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale action-active "></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="LG" class="product-image">
+					</div>
+					<div class="product-info-mini-comp">
+						<a href="#">
+							<h3 class="product-title-comp">LG Automatic Washing Machine FH2G6HDNR42</h3>
+						</a>
+						<div class="product-rating-comp">
+							<span class="stars">⭐ 4.8</span>
+							<span class="rating-text">(89 reviews)</span>
+						</div>
+						<div class="product-installment-comp"> 525,000 UZS / month</div>
+						<div class="product-stock-comp">Available</div>
+						<div class="product-footer">
+							<div class="product-prices-comp">
+								<span class="current-price-comp">6,300,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price-comp">7,500,000 UZS</span>
+									<span class="discount-badge-comp">-16%</span>
+								</div>
+							</div>
+							<button class="cart-btn-comp">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 3 -->
+				<div class="product-card-comp">
+					<div class="product-image-wrapper-comp">
+						<div class="product-badges">
+							<span class="badge badge-credit">60:0:1</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale action-active "></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Bosch" class="product-image">
+					</div>
+					<div class="product-info-mini-comp">
+						<a href="#">
+							<h3 class="product-title-comp">Bosch Serie 6 Washing Machine WAT28661ME</h3>
+						</a>
+						<div class="product-rating-comp">
+							<span class="stars">⭐ 4.7</span>
+							<span class="rating-text">(156 reviews)</span>
+						</div>
+						<div class="product-installment-comp"> 483,333 UZS / month</div>
+						<div class="product-stock-comp">Available</div>
+						<div class="product-footer">
+							<div class="product-prices-comp">
+								<span class="current-price-comp">5,800,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price-comp">6,800,000 UZS</span>
+									<span class="discount-badge-comp">-15%</span>
+								</div>
+							</div>
+							<button class="cart-btn-comp">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 4 -->
+				<div class="product-card-comp">
+					<div class="product-image-wrapper-comp">
+						<div class="product-badges">
+							<span class="badge badge-credit">45:0:2</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale action-active "></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Artel" class="product-image">
+					</div>
+					<div class="product-info-mini-comp">
+						<a href="#">
+							<h3 class="product-title-comp">Artel Smart Inverter Washing Machine TG100X</h3>
+						</a>
+						<div class="product-rating-comp">
+							<span class="stars">⭐ 4.5</span>
+							<span class="rating-text">(98 reviews)</span>
+						</div>
+						<div class="product-installment-comp"> 358,333 UZS / month</div>
+						<div class="product-stock-comp">Available</div>
+						<div class="product-footer">
+							<div class="product-prices-comp">
+								<span class="current-price-comp">4,300,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price-comp">5,200,000 UZS</span>
+									<span class="discount-badge-comp">-17%</span>
+								</div>
+							</div>
+							<button class="cart-btn-comp">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Product 5 -->
+				<div class="product-card-comp">
+					<div class="product-image-wrapper-comp">
+						<div class="product-badges">
+							<span class="badge badge-credit">55:0:1</span>
+						</div>
+						<div class="product-actions">
+							<button class="action-btn">
+								<i class="far fa-heart"></i>
+							</button>
+							<button class="action-btn">
+								<i class="fas fa-balance-scale action-active "></i>
+							</button>
+						</div>
+						<img src="./images/product.png" alt="Indesit" class="product-image">
+					</div>
+					<div class="product-info-mini-comp">
+						<a href="#">
+							<h3 class="product-title-comp">Indesit Front Load Washing Machine BWSA71253W</h3>
+						</a>
+						<div class="product-rating-comp">
+							<span class="stars">⭐ 4.4</span>
+							<span class="rating-text">(76 reviews)</span>
+						</div>
+						<div class="product-installment-comp"> 400,000 UZS / month</div>
+						<div class="product-stock-comp">Available</div>
+						<div class="product-footer">
+							<div class="product-prices-comp">
+								<span class="current-price-comp">4,800,000 UZS</span>
+								<div class="price-row">
+									<span class="old-price-comp">5,600,000 UZS</span>
+									<span class="discount-badge-comp">-14%</span>
+								</div>
+							</div>
+							<button class="cart-btn-comp">
+								<i class="fas fa-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Plus Product -->
+				<a href="./search.html">
+					<div class="plus-product">
+						<button class="add-product-btn">
+							<div class="plus-icon">+</div>
+							<div class="add-text">Add another<br>product</div>
+						</button>
+					</div>
+				</a>
+			</div>
+
+			<div class="toggle-wrapper">
+				<label class="toggle-container">
+					<input type="checkbox" class="toggle-input" id="toggleDiff">
+					<span class="toggle-slider"></span>
+				</label>
+				<span class="toggle-label">Show only different specifications</span>
+			</div>
+
+			<!-- Comparison Grid -->
+			<div class="comparison-wrapper">
+				<div class="comparison-grid">
+					<div class="section-title">Product Specifications</div>
+
+					<div class="all-rows">
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Weight (kg)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">72</div>
+								<div class="row-value">68</div>
+								<div class="row-value">75</div>
+								<div class="row-value">65</div>
+								<div class="row-value">70</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Load Capacity (kg)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">9</div>
+								<div class="row-value">8</div>
+								<div class="row-value">9</div>
+								<div class="row-value">7</div>
+								<div class="row-value">7</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Spin Speed (rpm)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">1400</div>
+								<div class="row-value">1200</div>
+								<div class="row-value">1400</div>
+								<div class="row-value">1000</div>
+								<div class="row-value">1200</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Energy Efficiency</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">A+++</div>
+								<div class="row-value">A++</div>
+								<div class="row-value">A+++</div>
+								<div class="row-value">A+</div>
+								<div class="row-value">A++</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Water Consumption (l/cycle)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">48</div>
+								<div class="row-value">52</div>
+								<div class="row-value">47</div>
+								<div class="row-value">55</div>
+								<div class="row-value">50</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Noise Level (dB)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">52</div>
+								<div class="row-value">54</div>
+								<div class="row-value">51</div>
+								<div class="row-value">56</div>
+								<div class="row-value">55</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Programs Count</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">14</div>
+								<div class="row-value">12</div>
+								<div class="row-value">16</div>
+								<div class="row-value">10</div>
+								<div class="row-value">12</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Inverter Motor</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">Yes</div>
+								<div class="row-value">Yes</div>
+								<div class="row-value">Yes</div>
+								<div class="row-value">Yes</div>
+								<div class="row-value">No</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Steam Wash</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">Available</div>
+								<div class="row-value">Available</div>
+								<div class="row-value">No</div>
+								<div class="row-value">No</div>
+								<div class="row-value">No</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Smart Control (Wi-Fi)</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">Yes</div>
+								<div class="row-value">Yes</div>
+								<div class="row-value">No</div>
+								<div class="row-value">Yes</div>
+								<div class="row-value">No</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Display Type</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">LED Digital</div>
+								<div class="row-value">LCD Touch</div>
+								<div class="row-value">LED Digital</div>
+								<div class="row-value">LED Basic</div>
+								<div class="row-value">LCD Text</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Manufacturer</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">Samsung (Korea)</div>
+								<div class="row-value">LG (Korea)</div>
+								<div class="row-value">Bosch (Germany)</div>
+								<div class="row-value">Artel (Uzbekistan)</div>
+								<div class="row-value">Indesit (Italy)</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Warranty Period</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">2 years</div>
+								<div class="row-value">2 years</div>
+								<div class="row-value">2 years</div>
+								<div class="row-value">3 years</div>
+								<div class="row-value">1 year</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Dimensions (HxWxD) cm</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">85 x 60 x 60</div>
+								<div class="row-value">85 x 60 x 65</div>
+								<div class="row-value">85 x 59 x 60</div>
+								<div class="row-value">85 x 60 x 55</div>
+								<div class="row-value">85 x 60 x 60</div>
+							</div>
+						</div>
+
+						<div class="values-row">
+							<div class="row-title">
+								<div class="row-label">Drum Material</div>
+							</div>
+							<div class="row-values">
+								<div class="row-value">Stainless Steel</div>
+								<div class="row-value">Stainless Steel</div>
+								<div class="row-value">Stainless Steel</div>
+								<div class="row-value">Steel</div>
+								<div class="row-value">Stainless Steel</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Contact Info -->
+				<div class="footer-column footer-contact-column">
+					<p class="footer-question">Have a question? Call us</p>
+					<a href="tel:+998712099944" class="footer-phone">+998 99 999 99 99</a>
+					<div class="footer-social">
+						<a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+						<a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+
+				<!-- Company -->
+				<div class="footer-column">
+					<h3 class="footer-title">Company</h3>
+					<ul class="footer-links">
+						<li><a href="#">For Legal Entities</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">News & Blogs</a></li>
+						<li><a href="#">Check IMEI</a></li>
+						<li><a href="#">Work at Technomart</a></li>
+					</ul>
+				</div>
+
+				<!-- Information -->
+				<div class="footer-column">
+					<h3 class="footer-title">Information</h3>
+					<ul class="footer-links">
+						<li><a href="#">Free Delivery</a></li>
+						<li><a href="#">Service Centers</a></li>
+						<li><a href="#">Personal Account</a></li>
+						<li><a href="#">Contact Numbers</a></li>
+						<li><a href="#">Public Offer Agreement</a></li>
+					</ul>
+				</div>
+
+				<!-- Support -->
+				<div class="footer-column">
+					<h3 class="footer-title">Customer Support</h3>
+					<ul class="footer-links">
+						<li><a href="#">Product Return</a></li>
+						<li><a href="#">Product Warranty</a></li>
+						<li><a href="#">Store Addresses</a></li>
+					</ul>
+				</div>
+
+				<!-- App Download -->
+				<div class="footer-column footer-app-column">
+					<h3 class="footer-title">Download the App</h3>
+					<div class="qr-content">
+						<div class="footer-qr">
+							<i class="fas fa-qrcode"></i>
+						</div>
+						<div class="qr-content-col">
+							<div class="footer-app-buttons">
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-google-play"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fab fa-apple"></i>
+								</a>
+								<a href="#" class="footer-app-btn">
+									<i class="fas fa-store"></i>
+								</a>
+							</div>
+							<p class="footer-qr-text">Scan QR code<br>to Download</p>
+							<img class="footer-arrow" width="50" height="30" src="./images/point-arrow.png" alt="point-arrow">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p class="footer-copyright">
+					2016-2025 © techouse.uz. All rights reserved. Product prices and purchase conditions are valid as of the
+					current date.
+				</p>
+				<div class="footer-payments">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa" class="payment-logo">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+						class="payment-logo">
+					<div class="payment-logo-box">Payme</div>
+					<div class="payment-logo-box">Click</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#top-bar">
+		<button class="scroll-top-btn">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+	</a>
+
+	<a href="#">
+		<button class="message-btn" id="messageBtn">
+			<i class="fas fa-comment-dots"></i>
+		</button>
+	</a>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const fixedInfo = document.getElementById('fixedProductInfo')
+			const container = fixedInfo.querySelector('.fixed-info-container')
+			const scrollThreshold = 250
+
+			// Get data from HTML
+			const products = []
+			document.querySelectorAll('.product-card-comp').forEach(card => {
+				const title = card.querySelector('.product-title-comp')?.textContent || ''
+				const ratingStars = card.querySelector('.stars')?.textContent || '⭐ 4.5'
+				const ratingText = card.querySelector('.rating-text')?.textContent || '(0 reviews)'
+				const installment = card.querySelector('.product-installment-comp')?.textContent || ''
+				const stock = card.querySelector('.product-stock-comp')?.textContent || 'Available'
+				const currentPrice = card.querySelector('.current-price-comp')?.textContent || ''
+				const oldPrice = card.querySelector('.old-price-comp')?.textContent || ''
+				const discountBadge = card.querySelector('.discount-badge-comp')?.textContent || ''
+
+				products.push({
+					title: title.length > 45 ? title.substring(0, 45) + '...' : title,
+					ratingStars,
+					ratingText,
+					installment,
+					stock,
+					currentPrice,
+					oldPrice,
+					discountBadge
+				})
+			})
+
+			// Create cards for fixed block
+			products.forEach(product => {
+				const card = document.createElement('div')
+				card.className = 'product-info-mini-comp-fixed'
+				card.innerHTML = `
+                    <h3 class="product-title-comp">${product.title}</h3>
+                    <div class="product-rating-comp">
+                        <span class="stars">${product.ratingStars}</span>
+                        <span class="rating-text">${product.ratingText}</span>
+                    </div>
+                    <div class="product-installment-comp">${product.installment}</div>
+                    <div class="product-stock-comp">${product.stock}</div>
+                    <div class="product-footer">
+                        <div class="product-prices-comp">
+                            <span class="current-price-comp">${product.currentPrice}</span>
+                            ${product.oldPrice ? `
+                            <div class="price-row">
+                                <span class="old-price-comp">${product.oldPrice}</span>
+                                <span class="discount-badge-comp">${product.discountBadge}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                        <button class="cart-btn-comp">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                `
+				container.appendChild(card)
+			})
+
+			// Handle scroll event
+			window.addEventListener('scroll', () => {
+				const comparisonSection = document.querySelector('.comparison-wrapper')
+				if (!comparisonSection) return
+
+				const scrollY = window.scrollY
+				const sectionTop = comparisonSection.offsetTop
+
+				if (scrollY > sectionTop) {
+					fixedInfo.style.display = 'block'
+				} else {
+					fixedInfo.style.display = 'none'
+				}
+			})
+		})
+
+		function toggleCatalog() {
+			const modal = document.getElementById('catalogModal')
+			const isActive = modal.classList.contains('active')
+
+			if (isActive) {
+				modal.classList.remove('active')
+				document.body.style.overflow = ''
+			} else {
+				modal.classList.add('active')
+				document.body.style.overflow = 'hidden'
+			}
+		}
+
+		window.addEventListener('resize', function () {
+			const modal = document.getElementById('catalogModal')
+			if (window.innerWidth > 768 && modal.classList.contains('active')) {
+				toggleCatalog()
+			}
+		});
+
+	</script>
+</body>
+
+</html>
