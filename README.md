@@ -5,7 +5,7 @@ TechHouse — это современный e-commerce веб-сайт для м
 
 ---
 
-##  Links
+## 🔗 Links
 
 - /**Figma Design:**/  
   https://www.figma.com/design/oM7ejRBrXfs6hFhTGM28w1/Untitled?node-id=0-1
@@ -31,23 +31,23 @@ TechHouse — это современный e-commerce веб-сайт для м
 ## 📁 Project Structure
 
 WebsiteV2/
-│
-├── index.html
-├── authPage.html
-├── basket.html
-├── cart.html
-├── checkout.html
-├── comparison.html
-├── search.html
-├── wishlist.html
-│
-├── css/
-│ └── styles.css
-│
-├── js/
-│ └── main.js
-│
-└── images/
+- │
+- ├── index.html
+- ├── authPage.html
+- ├── basket.html
+- ├── cart.html
+- ├── checkout.html
+- ├── comparison.html
+- ├── search.html
+- ├── wishlist.html
+- │
+- ├── css/
+- │ └── styles.css
+- │
+- ├── js/
+- │ └── main.js
+- │
+- └── images/
 
 
 ---
