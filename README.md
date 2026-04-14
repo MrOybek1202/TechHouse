@@ -1,5 +1,5 @@
 # TechHouse Website
-
+WebSite: https://techhouse-a.netlify.app/
 TechHouse — это современный e-commerce веб-сайт для магазина электроники.  
 Проект создан на основе дизайна в **Figma** и задеплоен с помощью **Netlify**.
 
