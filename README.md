@@ -1,8 +1,31 @@
-# TechHouse Website
-WebSite: https://techhouse-a.netlify.app/
-TechHouse — это современный e-commerce веб-сайт для магазина электроники.  
-Проект создан на основе дизайна в **Figma** и задеплоен с помощью **Netlify**.
 
+# 💻 TechHouse
+> WebSite: https://techhouse-a.netlify.app/
+> TechHouse — это современный e-commerce веб-сайт для магазина электроники.  
+> Проект создан на основе дизайна в **Figma** и задеплоен с помощью **Netlify**.
+> Modern tech solutions platform - Connect companies with technology services and expertise.
+
+## 🎯 Features
+- **Service Showcase** - Browse technology services
+- **Company Profiles** - View detailed service provider info
+- **Project Gallery** - See completed projects
+- **Testimonials** - Client success stories
+- **Contact Hub** - Easy communication system
+- **Blog Section** - Technology insights
+
+## 🏗️ Architecture
+- React.js Frontend
+- Node.js/Express Backend
+- MongoDB Database
+- Responsive Design
+- Vercel Deployment
+
+## 🚀 Getting Started
+```bash
+git clone https://github.com/MrOybek1202/TechHouse.git
+cd TechHouse
+npm install
+npm run dev
 ---
 
 ## 🔗 Links
